@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-class Redux extends Component {
+class Product extends Component {
   render() {
-    return(
+    return (
       <div>
 
       </div>
@@ -10,4 +10,4 @@ class Redux extends Component {
   }
 }
 
-export default Redux
+export default Product;
