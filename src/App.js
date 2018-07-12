@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import banner from './asserts/img/banner.jpg';
-import Product from './CartsList/index';
-import ControlledPanel from './TogglePanel/index';
+import Product from './Components/CartsList/index';
+import ControlledPanel from './Components/TogglePanel/index';
 import './App.css';
 
 class App extends Component {
