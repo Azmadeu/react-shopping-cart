@@ -10,8 +10,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img className="banner" src={banner}/>
-        <CartsList Carts={Carts}/>
+        <img
+          className="banner"
+          src={banner}/>
+        <CartsList Carts={Carts} />
         {/*<Sizes /> */}
         <ControlledPanel/>
         <footer>Coded by Serge Makarov</footer>

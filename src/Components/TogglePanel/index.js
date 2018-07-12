@@ -42,7 +42,7 @@ class ControlledPanel extends Component {
             </div>
             <div className="price">
               <p className="total">
-                price: 0$
+                0.00$
               </p>
             </div>
             <div className="check">
