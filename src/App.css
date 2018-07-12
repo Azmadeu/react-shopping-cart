@@ -9,14 +9,17 @@ div {
   display: block;
 }
 
-footer {
-  position: fixed;
-  width: 100%;
-  color: #ececec;
-  padding: 20px 0;
-  text-align: center;
-  background-color: #000;
-  bottom: 0;
+/*footer {*/
+  /*text-align: center;*/
+  /*color: #ececec;*/
+  /*padding: 20px;*/
+  /*background-color: #000;*/
+/*}*/
+
+main {
+  padding: 20px 2%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .banner {
@@ -146,13 +149,16 @@ footer {
   padding: 15px 0;
   margin-top: 40px;
   cursor: pointer;
-}
-
-.content .footer .check:hover {
   animation-name: background-color;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
+
+/*.content .footer .check:hover {*/
+  /*animation-name: background-color;*/
+  /*animation-duration: 1s;*/
+  /*animation-iteration-count: infinite;*/
+/*}*/
 
 @keyframes background-color {
   0% { background-color: #0c0b10 }
@@ -160,3 +166,66 @@ footer {
   100% { background-color: #0c0b10 }
 }
 
+.container {
+  float: left;
+}
+
+.inline {
+  display: inline-block;
+  width: 18%;
+  padding: 20px;
+}
+
+.inline img {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.cart {
+  float: left;
+  width: 25%;
+  position: relative;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+}
+
+.container .cart .title {
+  position: relative;
+  padding: 0 20px;
+  height: 45px;
+}
+
+.container .cart .price {
+  height: 60px;
+}
+
+.container .cart .price .installment {
+  color: #9c9b9b;
+}
+
+.container .cart .price b {
+  font-size: 1.5em;
+  margin-left: 5px;
+}
+
+small {
+  font-size: smaller;
+}
+
+.container .cart .btn {
+  background-color: #1b1a20;
+  color: #fff;
+  padding: 15px 0;
+  margin-top: 10px;
+  cursor: pointer;
+
+}
+
+.container .cart .btn:hover {
+  background-color: #ffc22b;
+  transition: background-color .5s;
+}
