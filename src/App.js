@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import banner from './img/banner.jpg';
-import Product from 'ProductsList';
-import Panel from 'togglePanel';
+import banner from './asserts/img/banner.jpg';
+import Product from './CartsList/index';
+import ControlledPanel from './TogglePanel/index';
 import './App.css';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <img className="banner" src={banner} />
         <Product />
-        <Panel/>
+        <ControlledPanel />
         <footer>Coded by Serge Makarov</footer>
       </div>
     );

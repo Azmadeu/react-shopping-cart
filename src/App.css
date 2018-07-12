@@ -5,6 +5,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+div {
+  display: block;
+}
+
 footer {
   position: fixed;
   width: 100%;
@@ -18,3 +22,141 @@ footer {
 .banner {
   width: 100%;
 }
+
+.button-position {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.open {
+  right: 0;
+}
+
+.bag {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  background: url("./asserts/img/lock.png") no-repeat;
+  background-size: contain;
+}
+
+.bag-closed {
+  position: absolute;
+  left: -60px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: url("./asserts/img/lock.png") no-repeat #000;
+  background-size: contain;
+}
+
+.bag-open {
+  width: 50px;
+  height: 50px;
+  color: #ececec;
+  background-color: #1b1a20;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  cursor: pointer;
+}
+
+.bag-open:hover {
+  background-color: #212027;
+}
+
+.control-cart {
+  position: fixed;
+  top: 0;
+  width: 450px;
+  height: 100%;
+  background-color: #1b1a20;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: right .2s;
+  -o-transition: right .2s;
+  transition: right .2s;
+}
+
+.closed {
+  right: -450px;
+}
+
+.content .header {
+  color: #ececec;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 45px 0;
+}
+
+.content .carts-list {
+  min-height: 280px;
+}
+
+.content .carts-list .item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 5%;
+  color: white;
+}
+
+.content .title {
+  font-weight: 700;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.content .footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5%;
+  box-shadow: 0 -0.5em 1em rgba(0,0,0,.3);
+  color: #5b5a5e;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.content .footer .sub {
+  width: 20%;
+}
+
+.content .footer .price {
+  width: 80%;
+  text-align: right;
+
+}
+
+.content .footer .price .total {
+  color: #eabf00;
+  font-size: 22px;
+}
+
+.content .footer .check {
+  color: #ececec;
+  text-transform: uppercase;
+  background-color: #0c0b10;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.content .footer .check:hover {
+  animation-name: background-color;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes background-color {
+  0% { background-color: #0c0b10 }
+  50% { background-color : #000}
+  100% { background-color: #0c0b10 }
+}
+
