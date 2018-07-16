@@ -1,42 +1,120 @@
+import CatTee from '../asserts/img/Cat-Tee-Black-T-shirt.jpg'
+import DarkThug from '../asserts/img/DarkThug.jpg'
+import Sphynx from '../asserts/img/Sphynx.jpg'
+import Skuul from '../asserts/img/Skuul.jpg'
+import WineSkuul from '../asserts/img/WineSkuul.jpg'
+
 export const Carts = [
   {
-    photo: "https://react-shopping-cart-67954.firebaseapp.com/static/media/8552515751438644_1.84f8290e.jpg",
-    model: "Nike Corinthians I shirt",
+    photo: CatTee,
+    model: "Cat Tee Black T-Shirt",
     currency: "$",
     price: {
       dollars: 10,
       cents: ".90"
     },
-    installment: "or 9x of $ 1.21"
+    installment: "or 9x of $ 1.21",
+    size: "L"
   },
   {
-    photo: "https://react-shopping-cart-67954.firebaseapp.com/static/media/18644119330491310_1.e24fb843.jpg",
-    model: "Nike Corinthians II shirt",
+    photo: DarkThug,
+    model: "Dark Thug Blue-Navy T-Shirt",
     currency: "$",
     price: {
-      dollars: 10,
-      cents: ".90"
+      dollars: 29,
+      cents: ".45"
     },
-    installment: "or 9x of $ 1.21"
+    installment: "or 9x of $ 1.21",
+    size: "L"
   },
   {
-    photo: "https://react-shopping-cart-67954.firebaseapp.com/static/media/11854078013954528_1.f339ec85.jpg",
-    model: "Feminina Nike Corinthians I shirt",
+    photo: Sphynx,
+    model: "Sphynx Tie Dye Wine T-Shirt",
+    currency: "$",
+    price: {
+      dollars: 9,
+      cents: ".00"
+    },
+    installment: `or 3x of $ 3.00`,
+    size: "L"
+  },
+  {
+    photo: Skuul,
+    model: "Skuul",
     currency: "$",
     price: {
       dollars: 14,
-      cents: ".90"
+      cents: ".00"
     },
-    installment: `or 7x of $ 2.13`
+    installment: "or 5x of $ 2.80",
+    size: "L"
   },
   {
-    photo: "https://react-shopping-cart-67954.firebaseapp.com/static/media/876661122392077_1.5875fccb.jpg",
-    model: "Feminina Nike Corinthians II shirt",
+    photo: WineSkuul,
+    model: "Wine Skul T-Shirt",
     currency: "$",
     price: {
-      dollars: 14,
-      cents: ".90"
+      dollars: 13,
+      cents: ".25"
     },
-    installment: "or 9x of $ 2.13"
+    installment: "or 3x of $ 4.42",
+    size: "L"
+  },
+  {
+    photo: WineSkuul,
+    model: "Wine Skul T-Shirt",
+    currency: "$",
+    price: {
+      dollars: 13,
+      cents: ".25"
+    },
+    installment: "or 3x of $ 4.42",
+    size: "L"
+  },
+  {
+    photo: WineSkuul,
+    model: "Wine Skul T-Shirt",
+    currency: "$",
+    price: {
+      dollars: 13,
+      cents: ".25"
+    },
+    installment: "or 3x of $ 4.42",
+    size: "L"
+  },
+  {
+    photo: WineSkuul,
+    model: "Wine Skul T-Shirt",
+    currency: "$",
+    price: {
+      dollars: 13,
+      cents: ".25"
+    },
+    installment: "or 3x of $ 4.42",
+    size: "L"
+  }
+];
+
+export const Sizes = [
+  {
+    size: "XS"
+  },
+  {
+    size: "S"
+  },
+  {
+    size: "M"
+  },
+  {
+    size: "ML"
+  },
+  {
+    size: "L"
+  },
+  {
+    size: "XL"
+  },
+  {
+    size: "XXL"
   }
 ];
