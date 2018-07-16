@@ -5,6 +5,13 @@ class CartsList extends Component {
     const carts = this.props.Carts;
     return (
       <div className="container">
+        <div className="header">
+          <small className="products-found">
+            <span>
+              "{this.props.Carts.length}" Product(s) found.
+            </span>
+          </small>
+        </div>
         {
           carts.map(cart => (
               <div
