@@ -9,10 +9,36 @@ div {
   display: block;
 }
 
-main {
-  padding: 20px 2%;
-  max-width: 1200px;
-  margin: 0 auto;
+label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: 35px;
+  height: 35px;
+  font-size: .8em;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  line-height: 35px;
+  text-align: center;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0;
+  font: 400 13px Arial;
 }
 
 .banner {
@@ -27,6 +53,7 @@ main {
 
 .open {
   right: 0;
+  /*overflow-y: scroll;*/
 }
 
 .bag {
@@ -42,25 +69,24 @@ main {
 
 .bag-closed {
   position: absolute;
-  top: 10px;
-  left: -35px;
-  width: 30px;
-  height: 30px;
+  left: -40px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  background: url("./asserts/img/lock.png") no-repeat #000;
-  background-size: contain;
+  background: url("./asserts/img/lock.png") no-repeat transparent;
+  background-size: cover;
 }
 
 .bag-open {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   color: #ececec;
   background-color: #1b1a20;
   text-align: center;
-  line-height: 50px;
+  line-height: 42px;
   position: absolute;
   top: 0;
-  left: -50px;
+  left: -42px;
   cursor: pointer;
 }
 
@@ -84,6 +110,7 @@ main {
 .closed {
   right: -350px;
 }
+
 
 .content .header {
   color: #ececec;
@@ -159,6 +186,11 @@ main {
   animation-iteration-count: infinite;
 }
 
+.content .footer .check:hover {
+  animation-iteration-count: 0;
+  background-color: #000;
+}
+
 @keyframes background-color {
   0% { background-color: #0c0b10 }
   50% { background-color : #000}
@@ -181,7 +213,7 @@ main {
 }
 
 .cart {
-  float: left;
+  float: right;
   width: 25%;
   position: relative;
   text-align: center;
@@ -193,7 +225,7 @@ main {
 
 .container .cart .title {
   position: relative;
-  padding: 0 20px;
+  padding: 0 5px;
   height: 45px;
 }
 
@@ -223,7 +255,101 @@ small {
 
 }
 
+h1 {
+  margin-top: 2px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.filter-bar {
+
+}
+
+.filter {
+  float: left;
+  margin-left: 16px;
+}
+
+.filter .title {
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+.filter .header {
+  margin-left: 3px;
+}
+
+.filter-btn {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.checkmark:hover {
+  transform: scale(1.2);
+}
+
+.checkmark:active {
+  background-color: black;
+  color: #fff;
+}
+
 .container .cart .btn:hover {
   background-color: #ffc22b;
   transition: background-color .5s;
 }
+
+.container .header {
+  margin-bottom: 10px;
+}
+
+.container .products-found {
+  margin: 16px;
+}
+
+.checkmark {
+  display:inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  font-size: .8em;
+  border-radius: 50%;
+  line-height: 35px;
+  text-align: center;
+  color: #1b1a20;
+  background-color: #ececec;
+  border: 1px solid transparent;
+}
+
+.cart img {
+  width: 180px;
+  height: 250px;
+}
+
+.sort {
+  float: right;
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+.sort select {
+  background-color: #fff;
+  outline: none;
+  border: 1px solid #ececec;
+  border-radius: 2px;
+  margin-left: 10px;
+  width: auto;
+  height: 35px;
+  cursor: pointer;
+}
+
+.sort option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+
