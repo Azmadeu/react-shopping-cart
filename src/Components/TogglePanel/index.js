@@ -6,7 +6,7 @@ class Panel extends Component {
   };
 
   handleClick = (event) => {
-    // this.props.removeCart(event.target.id)
+    this.props.removeCart(event.target.id)
   };
 
   onMouseOver = () => {

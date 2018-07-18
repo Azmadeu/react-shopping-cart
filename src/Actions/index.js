@@ -18,17 +18,18 @@ export const openPanelAction = () => {
   }
 };
 
-export const addCartAction = (targetId) => {
+export const addCartAction = (id) => {
   return {
     type: ADD_CART,
-    targetId: targetId,
-    Array: Carts
+    id: id,
+    products: Carts
   }
 };
 
-export const removeCartAction = (targetId) => {
+export const removeCartAction = (id) => {
   return {
     type: REMOVE_CART,
-    targetId: targetId,
+    id: id,
+    products: Carts
   }
 };
