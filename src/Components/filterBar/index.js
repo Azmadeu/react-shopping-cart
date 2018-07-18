@@ -10,9 +10,9 @@ class Filter extends Component {
         <h1 className="title">Sizes:</h1>
         {
           Sizes.map(item => (
-              <div className="filter-btn">
+              <div className="filter-btn" key={item.size}>
                 <label>
-                  <input type="checkbox" value={item.size} key={item.size}/>
+                  <input type="checkbox" value={item.size} />
                   <span className="checkmark">{item.size}</span>
                 </label>
               </div>

@@ -67,6 +67,22 @@ input {
   background-size: contain;
 }
 
+.quantity {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  color: #0c0b10;
+  font-weight: 700;
+  font-size: .7em;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  background-color: #eabf00;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+}
+
 .bag-closed {
   position: absolute;
   left: -40px;
@@ -78,15 +94,15 @@ input {
 }
 
 .bag-open {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   color: #ececec;
   background-color: #1b1a20;
   text-align: center;
-  line-height: 42px;
+  line-height: 50px;
   position: absolute;
   top: 0;
-  left: -42px;
+  left: -50px;
   cursor: pointer;
 }
 
@@ -97,7 +113,7 @@ input {
 .control-cart {
   position: fixed;
   top: 0;
-  width: 350px;
+  width: 450px;
   height: 100%;
   background-color: #1b1a20;
   -webkit-box-sizing: border-box;
@@ -108,7 +124,7 @@ input {
 }
 
 .closed {
-  right: -350px;
+  right: -450px;
 }
 
 
@@ -121,7 +137,7 @@ input {
 }
 
 .content .carts-list {
-  min-height: 240px;
+  min-height: 280px;
 }
 
 .content .carts-list .item {
@@ -151,14 +167,14 @@ input {
 
 .content .footer .sub {
   width: 20%;
+  font-size:16px;
   vertical-align: middle;
   display: inline-block;
 }
 
 .content .footer .price {
-  width: 70%;
+  width: 80%;
   text-align: right;
-  margin: 0;
   vertical-align: middle;
   display: inline-block;
 }
@@ -169,7 +185,7 @@ input {
 
 .content .footer .price .total {
   color: #eabf00;
-  font-size: 20px;
+  font-size: 22px;
   display: block;
 }
 
@@ -179,7 +195,7 @@ input {
   background-color: #0c0b10;
   text-align: center;
   padding: 15px;
-  margin-top: 0;
+  margin-top: 40px;
   cursor: pointer;
   animation-name: background-color;
   animation-duration: 1s;
@@ -213,7 +229,7 @@ input {
 }
 
 .cart {
-  float: right;
+  float: left;
   width: 25%;
   position: relative;
   text-align: center;
@@ -262,13 +278,10 @@ h1 {
   font-weight: bold;
 }
 
-.filter-bar {
-
-}
-
 .filter {
   float: left;
   margin-left: 16px;
+  width: 15%;
 }
 
 .filter .title {
@@ -353,3 +366,8 @@ h1 {
   padding: 0px 2px 1px;
 }
 
+.carts-list .shelf-empty  {
+  color: #ececec;
+  text-align: center;
+  line-height: 40px;
+}
