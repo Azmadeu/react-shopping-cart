@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 
 class Carts extends Component {
   handleClick = (event) => {
-    // this.props.addCart(event.target.id);
-    console.log(event.target.id);
+    this.props.addCart(event.target.id);
     this.props.increment();
     this.props.openPanel();
   };
