@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {mapDispatchToProps, mapStateToProps} from "../../Redux/index";
 
 class Panel extends Component {
   render() {
-    const {panelsVisibility} = this.props.reducer;
+    console.log(this.props);
+    const {
+      panelsVisibility,
+      Counter,
+      Basket
+    } = this.props.reducer;
+    console.log(Basket);
     return (
       <div className={panelsVisibility ? "control-cart open" : "control-cart closed"}>
         <div
@@ -15,26 +19,34 @@ class Panel extends Component {
             panelsVisibility ?
               "X"
               :
-            <span className="quantity">
-                {this.props.reducer.Counter}
+              <span className="quantity">
+                {Counter}
             </span>
           }
         </div>
         <div className="content">
           <div className="header">
             <div className="bag">
-              <span className="quantity">{this.props.reducer.Counter}</span>
+              <span className="quantity">
+                {Counter}
+              </span>
             </div>
             <span className="title">
                 Bag
               </span>
           </div>
           <div className="carts-list">
-            <p className="shelf-empty">
-              Add some product in the bag
-              <br />
-              :)
-            </p>
+            {
+              Basket.length === 0
+                ?
+                <p className="shelf-empty">
+                  Add some product in the bag
+                  <br/>
+                  :)
+                </p>
+                :
+                <div />
+            }
           </div>
           <div className="footer">
             <div className="sub">
@@ -55,6 +67,4 @@ class Panel extends Component {
   }
 }
 
-const ControlledPanel = connect(mapStateToProps, mapDispatchToProps)(Panel);
-
-export default ControlledPanel
+export default Panel

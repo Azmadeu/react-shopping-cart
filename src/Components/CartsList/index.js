@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import { connect } from "react-redux";
-import { mapDispatchToProps, mapStateToProps } from '../../Redux/index';
 
 class Carts extends Component {
   handleClick = (event) => {
+    // this.props.addCart(event.target.id);
     console.log(event.target.id);
     this.props.increment();
     this.props.openPanel();
@@ -51,6 +50,4 @@ class Carts extends Component {
   }
 }
 
-const CartsList = connect(mapStateToProps, mapDispatchToProps)(Carts);
-
-export default CartsList;
+export default Carts
