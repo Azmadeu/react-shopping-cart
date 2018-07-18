@@ -1,8 +1,11 @@
-import CatTee from '../asserts/img/Cat-Tee-Black-T-shirt.jpg'
-import DarkThug from '../asserts/img/DarkThug.jpg'
-import Sphynx from '../asserts/img/Sphynx.jpg'
-import Skuul from '../asserts/img/Skuul.jpg'
-import WineSkuul from '../asserts/img/WineSkuul.jpg'
+import CatTee from '../asserts/img/Cat-Tee-Black-T-shirt.jpg';
+import DarkThug from '../asserts/img/DarkThug.jpg';
+import Sphynx from '../asserts/img/Sphynx.jpg';
+import Skuul from '../asserts/img/Skuul.jpg';
+import WineSkuul from '../asserts/img/WineSkuul.jpg';
+import BornOnStreet from '../asserts/img/BornOnTheStreet.jpg';
+import ShortSleeve from '../asserts/img/ShortSleeveT-Shirt.jpg';
+import SphynxTie from '../asserts/img/SphynxTieDyeGreyT-Shirt.jpg'
 
 export const Carts = [
   {
@@ -61,36 +64,36 @@ export const Carts = [
     size: "L"
   },
   {
-    photo: WineSkuul,
-    model: "Wine Skul T-Shirt",
+    photo: ShortSleeve,
+    model: "Short Sleeve T-Shirt",
     currency: "$",
     price: {
-      dollars: 13,
-      cents: ".25"
+      dollars: 75,
+      cents: ".00"
     },
-    installment: "or 3x of $ 4.42",
+    installment: "or 5x of $ 15.00",
     size: "L"
   },
   {
-    photo: WineSkuul,
-    model: "Wine Skul T-Shirt",
+    photo: BornOnStreet,
+    model: "Born On The Streets",
     currency: "$",
     price: {
-      dollars: 13,
-      cents: ".25"
+      dollars: 25,
+      cents: ".90"
     },
-    installment: "or 3x of $ 4.42",
+    installment: "or 12x of $ 2.16",
     size: "L"
   },
   {
-    photo: WineSkuul,
-    model: "Wine Skul T-Shirt",
+    photo: SphynxTie,
+    model: "Sphynx Tie Dye Grey T-Shirt",
     currency: "$",
     price: {
-      dollars: 13,
-      cents: ".25"
+      dollars: 10,
+      cents: ".90"
     },
-    installment: "or 3x of $ 4.42",
+    installment: "or 9x of $ 1.21",
     size: "L"
   }
 ];
@@ -118,3 +121,5 @@ export const Sizes = [
     size: "XXL"
   }
 ];
+
+
