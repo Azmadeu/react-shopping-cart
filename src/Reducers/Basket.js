@@ -18,7 +18,7 @@ export default (state = defaultState, action) => {
       const elem = action.Array.find(item => item.model === action.targetID);
       return [...state, elem];
     case REMOVE_CART:
-      return [];
+      return []; //[...state].slice(action.id, 1).concat([...state].slice(action.id + 1));
     default:
       return state;
   }

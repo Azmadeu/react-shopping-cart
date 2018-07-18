@@ -32,7 +32,7 @@ class Panel extends Component {
             </div>
             <span className="title">
                 Bag
-              </span>
+            </span>
           </div>
           <div className="carts-list">
             {
@@ -45,28 +45,31 @@ class Panel extends Component {
                 </p>
                 :
                 Basket.map(item => (
-                <div className="shelf-item" key={item.model}>
-                  <div className="thumb">
-                    <img
-                      src={item.photo}
-                      alt={item.model}
-                    />
+                  <div
+                    className="shelf-item"
+                    key={item.model}
+                  >
+                    <div className="thumb">
+                      <img
+                        src={item.photo}
+                        alt={item.model}
+                      />
+                    </div>
+                    <div className="del"/>
+                    <div className="details">
+                      <p className="title">
+                        {item.model}
+                      </p>
+                      <p className="desc">
+                        L | Kakayato nadpis ne ebu zachem
+                        <br/>
+                        Quantity: 1
+                      </p>
+                    </div>
+                    <div className="price">
+                      <p>{item.currency + " " + item.price.dollars + item.price.cents}</p>
+                    </div>
                   </div>
-                  <div className="del" />
-                  <div className="details">
-                    <p className="title">
-                      {item.model}
-                    </p>
-                    <p className="desc">
-                      L | Kakayato nadpis ne ebu zachem
-                      <br/>
-                      Quantity: 1
-                    </p>
-                  </div>
-                  <div className="price">
-                    <p>{item.currency + " " + item.price.dollars + item.price.cents}</p>
-                  </div>
-                </div>
                 ))
             }
           </div>
@@ -76,7 +79,23 @@ class Panel extends Component {
             </div>
             <div className="price">
               <p className="total">
-                {Basket.reduce}0.00$
+                {
+                  Basket.length === 0
+                    ?
+                    "$ 0.00"
+                    :
+                    Basket.length === 1
+                      ?
+                      ("$ " + Basket[0].price.dollars + Basket[0].price.cents)
+                      :
+                      (() => {
+                        let result = 0;
+                        Basket.forEach(item => {
+                          result += +(item.price.dollars + item.price.cents);
+                        });
+                        return "$ " + result.toFixed(2);
+                      })()
+                }
               </p>
             </div>
             <div className="check">

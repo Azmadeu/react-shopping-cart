@@ -68,7 +68,6 @@ small {
 
 .open {
   right: 0;
-  /*overflow-y: scroll;*/
 }
 
 .bag {
@@ -142,6 +141,10 @@ small {
   right: -450px;
 }
 
+.content {
+  height: 100%;
+  overflow-y: scroll;
+}
 
 .content .header {
   color: #ececec;
@@ -397,9 +400,9 @@ small {
 }
 
 .shelf-item .del {
-  width: 16px;
-  height: 16px;
-  top: 15px;
+  width: 15px;
+  height: 15px;
+  top: 14px;
   right: 5%;
   border-radius: 50%;
   position: absolute;
@@ -410,7 +413,11 @@ small {
 }
 
 .shelf-item .del:hover {
-  background-position-x: -17px;
+  background-position-x: -15px;
+}
+
+.del:hover ~ .shelf-item {
+  background: orange;
 }
 
 .details, .thumb, .price {
@@ -422,6 +429,7 @@ small {
   width: 57%;
   display: inline-block;
   vertical-align: middle;
+  animation-name: background-panel-color;
 }
 
 .shelf-item .price {
