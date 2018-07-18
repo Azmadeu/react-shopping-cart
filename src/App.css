@@ -280,7 +280,8 @@ h1 {
 
 .filter {
   float: left;
-  margin-left: 16px;
+  margin-left: 40px;
+  margin-top: 20px;
   width: 15%;
 }
 
@@ -337,8 +338,8 @@ h1 {
 }
 
 .cart img {
-  width: 180px;
-  height: 250px;
+  width: 235px;
+  height: 345px;
 }
 
 .sort {
@@ -370,4 +371,21 @@ h1 {
   color: #ececec;
   text-align: center;
   line-height: 40px;
+}
+
+.carts-list .shelf-item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 5%;
+  transition: background-color .2s,opacity .2s;
+}
+
+.star-container small {
+  color: #aaa;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.star-container {
+  text-align: center;
 }

@@ -7,7 +7,9 @@ class Filter extends Component {
     return (
       <div className="filter-bar">
         <div className="filter">
-        <h1 className="title">Sizes:</h1>
+        <h1 className="title">
+          Sizes:
+        </h1>
         {
           Sizes.map(item => (
               <div className="filter-btn" key={item.size}>
@@ -19,7 +21,14 @@ class Filter extends Component {
             )
           )
         }
+          <div className="star-container">
+            <small>
+              Leave a star on Github if this repository was useful :)
+            </small>
+            {/*<span>button</span>*/}
+          </div>
         </div>
+
         <Sort />
       </div>
     )
