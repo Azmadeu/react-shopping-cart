@@ -1,11 +1,14 @@
-import CatTee from '../asserts/img/Cat-Tee-Black-T-shirt.jpg';
-import DarkThug from '../asserts/img/DarkThug.jpg';
-import Sphynx from '../asserts/img/Sphynx.jpg';
-import Skuul from '../asserts/img/Skuul.jpg';
-import WineSkuul from '../asserts/img/WineSkuul.jpg';
-import BornOnStreet from '../asserts/img/BornOnTheStreet.jpg';
-import ShortSleeve from '../asserts/img/ShortSleeveT-Shirt.jpg';
-import SphynxTie from '../asserts/img/SphynxTieDyeGreyT-Shirt.jpg'
+import {
+  CatTee,
+  DarkThug,
+  SphynxTie,
+  ShortSleeve,
+  Skuul,
+  Sphynx,
+  BornOnStreet,
+  WineSkuul
+} from '../asserts/img'
+
 
 export const Carts = [
   {
@@ -17,7 +20,8 @@ export const Carts = [
       cents: ".90"
     },
     installment: "or 9x of $ 1.21",
-    size: "L"
+    size: "L",
+    id: 0
   },
   {
     photo: DarkThug,
@@ -28,7 +32,8 @@ export const Carts = [
       cents: ".45"
     },
     installment: "or 9x of $ 1.21",
-    size: "L"
+    size: "L",
+    id: 1
   },
   {
     photo: Sphynx,
@@ -39,7 +44,8 @@ export const Carts = [
       cents: ".00"
     },
     installment: `or 3x of $ 3.00`,
-    size: "L"
+    size: "L",
+    id: 2
   },
   {
     photo: Skuul,
@@ -50,7 +56,8 @@ export const Carts = [
       cents: ".00"
     },
     installment: "or 5x of $ 2.80",
-    size: "L"
+    size: "L",
+    id: 3
   },
   {
     photo: WineSkuul,
@@ -61,7 +68,8 @@ export const Carts = [
       cents: ".25"
     },
     installment: "or 3x of $ 4.42",
-    size: "L"
+    size: "L",
+    id: 4
   },
   {
     photo: ShortSleeve,
@@ -72,7 +80,8 @@ export const Carts = [
       cents: ".00"
     },
     installment: "or 5x of $ 15.00",
-    size: "L"
+    size: "L",
+    id: 5
   },
   {
     photo: BornOnStreet,
@@ -83,7 +92,8 @@ export const Carts = [
       cents: ".90"
     },
     installment: "or 12x of $ 2.16",
-    size: "L"
+    size: "L",
+    id: 6
   },
   {
     photo: SphynxTie,
@@ -94,7 +104,8 @@ export const Carts = [
       cents: ".90"
     },
     installment: "or 9x of $ 1.21",
-    size: "L"
+    size: "L",
+    id: 7
   }
 ];
 

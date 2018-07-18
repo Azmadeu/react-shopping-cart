@@ -1,9 +1,8 @@
-import Counter from './Counter'
-import panelsVisibility from './panelsVisibility';
+import panelsVisibility from './PanelsVisibility';
 import Basket from './Basket';
 import { createStore, combineReducers } from 'redux';
 
-const Reducer = combineReducers({Counter, panelsVisibility, Basket});
+const Reducer = combineReducers({panelsVisibility, Basket});
 
 export const store = createStore(Reducer);
 

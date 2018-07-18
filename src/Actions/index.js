@@ -2,8 +2,6 @@ import { Carts } from '../data/index'
 import {
   TOGGLE_PANEL,
   OPEN_PANEL,
-  INCREMENT_IN_BASKET,
-  DECREMENT_IN_BASKET,
   ADD_CART,
   REMOVE_CART
 } from './types'
@@ -20,29 +18,17 @@ export const openPanelAction = () => {
   }
 };
 
-export const incAction = () => {
-  return {
-    type: INCREMENT_IN_BASKET
-  }
-};
-
-export const decAction = () => {
-  return {
-    type: DECREMENT_IN_BASKET
-  }
-};
-
-export const addCartAction = (targetID) => {
+export const addCartAction = (targetId) => {
   return {
     type: ADD_CART,
-    targetID: targetID,
+    targetId: targetId,
     Array: Carts
   }
 };
 
-export const removeCartAction = (targetID) => {
+export const removeCartAction = (targetId) => {
   return {
     type: REMOVE_CART,
-    targetID: targetID,
+    targetId: targetId,
   }
 };

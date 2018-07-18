@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 class Carts extends Component {
   handleClick = (event) => {
     this.props.addCart(event.target.id);
-    this.props.increment();
     this.props.openPanel();
   };
 
@@ -37,7 +36,11 @@ class Carts extends Component {
                     {cart.installment}
                   </div>
                 </div>
-                <div className="btn" id={cart.model} onClick={this.handleClick}>
+                <div
+                  className="btn"
+                  id={cart.id}
+                  onClick={this.handleClick}
+                >
                   Add to cart
                 </div>
               </div>

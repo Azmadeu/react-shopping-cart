@@ -1,13 +1,31 @@
 import React, {Component} from 'react';
 
 class Panel extends Component {
+  state = {
+    onMouse: false
+  };
+
+  handleClick = (event) => {
+    // this.props.removeCart(event.target.id)
+  };
+
+  onMouseOver = () => {
+    this.setState(prevState => ({
+      onMouse: !prevState.onMouse
+    }))
+  };
+
+  onMouseOut = () => {
+    this.setState(prevState => ({
+      onMouse: !prevState.onMouse
+    }))
+  };
+
   render() {
     const {
       panelsVisibility,
-      Counter,
       Basket
     } = this.props;
-    console.log(Basket);
     return (
       <div className={panelsVisibility ? "control-cart open" : "control-cart closed"}>
         <div
@@ -19,15 +37,15 @@ class Panel extends Component {
               "X"
               :
               <span className="quantity">
-                {Counter}
-            </span>
+                {Basket.length}
+              </span>
           }
         </div>
         <div className="content">
           <div className="header">
             <div className="bag">
               <span className="quantity">
-                {Counter}
+                {Basket.length}
               </span>
             </div>
             <span className="title">
@@ -46,8 +64,7 @@ class Panel extends Component {
                 :
                 Basket.map(item => (
                   <div
-                    className="shelf-item"
-                    key={item.model}
+                    className={this.state.onMouse ? "shelf-item mouseover" : "shelf-item"}
                   >
                     <div className="thumb">
                       <img
@@ -55,15 +72,22 @@ class Panel extends Component {
                         alt={item.model}
                       />
                     </div>
-                    <div className="del"/>
+                    <div
+                      className="del"
+                      id={item.id}
+                      onMouseOver={this.onMouseOver}
+                      onMouseOut={this.onMouseOut}
+                      onClick={this.handleClick}
+                    />
                     <div className="details">
                       <p className="title">
                         {item.model}
                       </p>
                       <p className="desc">
-                        L | Kakayato nadpis ne ebu zachem
+                        L | Preto com listras brancas
                         <br/>
                         Quantity: 1
+
                       </p>
                     </div>
                     <div className="price">
