@@ -1,24 +1,28 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
+import { mapDispatchToProps, mapStateToProps } from '../../Redux/index';
 
-class CartsList extends Component {
+class Carts extends Component {
+  handleClick = (event) => {
+    console.log(event.target.id);
+    this.props.increment();
+    this.props.openPanel();
+  };
+
   render() {
     const carts = this.props.Carts;
     return (
       <div className="container">
-        <div className="header">
-          <small className="products-found">
-            <span>
-              "{this.props.Carts.length}" Product(s) found.
-            </span>
-          </small>
-        </div>
         {
           carts.map(cart => (
               <div
                 className="cart"
-                key={cart.price.model}
+                key={cart.model}
               >
-                <img src={cart.photo}/>
+                <img
+                  src={cart.photo}
+                  alt="model"
+                />
                 <div className="title">
                   {cart.model}
                 </div>
@@ -35,7 +39,7 @@ class CartsList extends Component {
                     {cart.installment}
                   </div>
                 </div>
-                <div className="btn">
+                <div className="btn" id={cart.model} onClick={this.handleClick}>
                   Add to cart
                 </div>
               </div>
@@ -46,5 +50,7 @@ class CartsList extends Component {
     )
   }
 }
+
+const CartsList = connect(mapStateToProps, mapDispatchToProps)(Carts);
 
 export default CartsList;
