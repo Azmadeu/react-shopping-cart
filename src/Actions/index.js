@@ -1,4 +1,4 @@
-import { Carts, getValueById } from "../data";
+import { Carts } from '../data/index'
 import {
   TOGGLE_PANEL,
   OPEN_PANEL,
@@ -35,12 +35,14 @@ export const decAction = () => {
 export const addCartAction = (targetID) => {
   return {
     type: ADD_CART,
-    cart: getValueById(Carts, targetID)
+    targetID: targetID,
+    Array: Carts
   }
 };
 
-export const removeCartAction = () => {
+export const removeCartAction = (targetID) => {
   return {
-    type: REMOVE_CART
+    type: REMOVE_CART,
+    targetID: targetID,
   }
 };
