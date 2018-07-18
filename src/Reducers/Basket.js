@@ -3,12 +3,24 @@ import {
   REMOVE_CART
 } from '../Actions/types'
 
-export default (state = [], action) => {
+const defaultState = [];
+
+export default (state = defaultState, action) => {
   switch (action.type) {
     case ADD_CART:
-      return [...state, action.cart]; // [...state, CART_NAME]
+      // let elem;
+      // (() => {
+      //   let i = action.Array.length;
+      //   while (i--) {
+      //     if (action.Array[i].model === action.targetID) {
+      //       elem = action.Array[i];
+      //     }
+      //   }
+      // })();
+      const elem = action.Array.find(item => item.model === action.targetID);
+      return [...state, elem];
     case REMOVE_CART:
-      return []; // with methods splice & concat
+      return [];
     default:
       return state;
   }
