@@ -1,0 +1,6 @@
+export const TOGGLE_PANEL = 'TOGGLE_PANEL';
+export const OPEN_PANEL = 'OPEN_PANEL';
+export const INCREMENT_IN_BASKET ='INCREMENT_IN_BASKET';
+export const DECREMENT_IN_BASKET = 'DECREMENT_IN_BASKET';
+export const ADD_CART = 'ADD_CART';
+export const REMOVE_CART = 'REMOVE_CART';
