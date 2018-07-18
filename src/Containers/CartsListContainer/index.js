@@ -1,14 +1,16 @@
 import {connect} from "react-redux";
-import Carts from '../../Components/CartsList/index'
+import Carts from '../../Components/CartsList'
 import {
   addCartAction,
   incAction,
   openPanelAction
-} from "../../Actions/index";
+} from "../../Actions";
 
 const mapStateToProps = (state) => {
   return {
-    reducer: state
+    panelsVisibility: state.panelsVisibility,
+    Counter: state.Counter,
+    Basket: state.Basket
   };
 };
 

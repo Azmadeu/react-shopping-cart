@@ -6,7 +6,7 @@ class Panel extends Component {
       panelsVisibility,
       Counter,
       Basket
-    } = this.props.reducer;
+    } = this.props;
     console.log(Basket);
     return (
       <div className={panelsVisibility ? "control-cart open" : "control-cart closed"}>

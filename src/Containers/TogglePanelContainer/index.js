@@ -8,7 +8,9 @@ import {
 
 const mapStateToProps = (state) => {
   return {
-    reducer: state
+    panelsVisibility: state.panelsVisibility,
+    Counter: state.Counter,
+    Basket: state.Basket
   };
 };
 
