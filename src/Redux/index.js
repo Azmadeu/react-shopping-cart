@@ -1,13 +1,34 @@
-import React, { Component } from 'react';
+import {createStore, combineReducers} from 'redux';
+import {Counter, decAction, incAction} from './Counter'
+import {panelsVisibility, isOpenAction, openPanelAction} from './panelsVisibility';
+// статические методы.
+// в ес5 ес6.
+// Чем отличаются от обычных методов?
+// где как и для чего используются статические методы
 
-class Redux extends Component {
-  render() {
-    return(
-      <div>
+export const mapStateToProps = (state) => {
+  return {reducer: state};
+};
 
-      </div>
-    )
+export const mapDispatchToProps = (dispatch) => {
+  return {
+    increment: () => {
+      dispatch(incAction())
+    },
+    decrement: () => {
+      dispatch(decAction())
+    },
+    isOpen: () => {
+      dispatch(isOpenAction())
+    },
+    openPanel: () => {
+      dispatch(openPanelAction())
+    }
   }
-}
+};
 
-export default Redux
+const rootReducer = combineReducers({Counter, panelsVisibility});
+
+export const store = createStore(rootReducer);
+
+
