@@ -1,40 +1,40 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {mapDispatchToProps, mapStateToProps} from "../../Redux/index";
 
-class ControlledPanel extends Component {
-  constructor() {
-    super();
-    this.state = {
-      open: false
-    };
-  }
-
-  handleClick = (event) => {
-      this.setState({
-        open: !this.state.open,
-      });
-  };
-
+class Panel extends Component {
   render() {
+    const {panelsVisibility} = this.props.reducer;
     return (
-      <div className={this.state.open ? "control-cart open" : "control-cart closed"}>
-          <div className={this.state.open ? "bag-open" : "bag-closed"} onClick={this.handleClick}>
-            {this.state.open && "X"}
-          </div>
+      <div className={panelsVisibility ? "control-cart open" : "control-cart closed"}>
+        <div
+          className={panelsVisibility ? "bag-open" : "bag-closed"}
+          onClick={this.props.isOpen}
+        >
+          {
+            panelsVisibility ?
+              "X"
+              :
+            <span className="quantity">
+                {this.props.reducer.Counter}
+            </span>
+          }
+        </div>
         <div className="content">
           <div className="header">
             <div className="bag">
+              <span className="quantity">{this.props.reducer.Counter}</span>
             </div>
-              <span className="title">
+            <span className="title">
                 Bag
               </span>
           </div>
           <div className="carts-list">
-            <div className="item">
-              Cart
-            </div>
-            <div className="item">
-              Cart
-            </div>
+            <p className="shelf-empty">
+              Add some product in the bag
+              <br />
+              :)
+            </p>
           </div>
           <div className="footer">
             <div className="sub">
@@ -54,5 +54,7 @@ class ControlledPanel extends Component {
     );
   }
 }
+
+const ControlledPanel = connect(mapStateToProps, mapDispatchToProps)(Panel);
 
 export default ControlledPanel
