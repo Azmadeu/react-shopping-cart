@@ -9,5 +9,7 @@ export default (state = 0, action) => {
       return state + 1;
     case DECREMENT_PRODUCT:
       return state - 1;
+    default:
+      return state;
   }
 }
