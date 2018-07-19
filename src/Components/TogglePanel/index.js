@@ -5,6 +5,20 @@ class Panel extends Component {
     onMouse: false
   };
 
+  componentDidMount() {
+    document.getElementById('container').addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.getElementById('container').removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  handleClickOutside = (event) => {
+    if (event.target.className !== "btn") {
+      this.props.closePanel();
+    }
+  };
+
   handleClick = (event) => {
     this.props.removeCart(event.target.id);
     this.setState(prevState => ({
@@ -30,10 +44,13 @@ class Panel extends Component {
       Basket
     } = this.props;
     return (
-      <div className={PanelsVisibility ? "control-cart open" : "control-cart closed"}>
+      <div
+        className={PanelsVisibility ? "control-cart open" : "control-cart closed"}
+        id="ignore"
+      >
         <div
           className={PanelsVisibility ? "bag-open" : "bag-closed"}
-          onClick={this.props.isOpen}
+          onClick={this.props.togglePanel}
         >
           {
             PanelsVisibility ?

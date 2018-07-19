@@ -2,12 +2,11 @@ body {
   display: block;
   margin: 0;
   color: #1b1a20;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', 'sans-serif';
 }
 
 h1 {
   margin-top: 2px;
-  margin-bottom: 20px;
   font-size: 1em;
   font-weight: bold;
 }
@@ -58,6 +57,11 @@ input {
 
 small {
   font-size: smaller;
+}
+
+.filter-bar h1 {
+  margin-left: 30px;
+  margin-top: 40px;
 }
 
 .banner {
@@ -195,14 +199,10 @@ small {
 }
 
 .content .footer {
-  width: 100%;
   box-sizing: border-box;
   padding: 5%;
   box-shadow: 0 -0.5em 1em rgba(0, 0, 0, .3);
   color: #5b5a5e;
-  font-size: 12px;
-  vertical-align: middle;
-  display: inline-block;
 }
 
 .content .footer .sub {
@@ -260,7 +260,8 @@ small {
 }
 
 .container {
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .inline {
@@ -275,8 +276,8 @@ small {
 }
 
 .cart {
-  float: left;
-  width: 25%;
+  display: flex;
+  flex-direction: column;
   position: relative;
   text-align: center;
   box-sizing: border-box;
@@ -285,14 +286,14 @@ small {
   border: 1px solid transparent;
 }
 
-.container .cart .title {
-  position: relative;
-  padding: 0 5px;
-  height: 45px;
+.cart:hover {
+  border: 1px solid #ededed;
 }
 
-.container .cart .price {
-  height: 60px;
+.container .cart .title {
+  padding: 14px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .container .cart .price .installment {
@@ -314,10 +315,8 @@ small {
 }
 
 .filter {
-  float: left;
   margin-left: 40px;
   margin-top: 20px;
-  width: 15%;
 }
 
 .filter .title {
@@ -347,8 +346,17 @@ small {
   margin-bottom: 10px;
 }
 
-.container .products-found {
-  margin: 16px;
+.column .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 50px;
+}
+
+.products-found {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .checkmark {
@@ -367,15 +375,20 @@ small {
   border: 1px solid transparent;
 }
 
+.cart .free-shipping {
+  position: absolute;
+  color: #ececec;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  font-size: .6em;
+  background-color: #1b1a20;
+  cursor: default;
+}
+
 .cart img {
   width: 235px;
   height: 345px;
-}
-
-.sort {
-  float: right;
-  margin-top: 40px;
-  margin-right: 20px;
 }
 
 .sort select {
@@ -507,6 +520,7 @@ small {
 }
 
 .star-container small {
+
   color: #aaa;
   margin-bottom: 8px;
   display: inline-block;
@@ -527,4 +541,20 @@ small {
 
 .minus img {
 
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }

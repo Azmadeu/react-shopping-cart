@@ -1,21 +1,25 @@
 import React, {Component} from 'react';
-
 class Carts extends Component {
+
   handleClick = (event) => {
     this.props.addCart(event.target.id);
     this.props.openPanel();
   };
-
   render() {
     const carts = this.props.Products[0];
     return (
-      <div className="container">
+      <div
+        className="container"
+      >
         {
           carts.map(cart => (
               <div
                 className="cart"
                 key={cart.model}
               >
+                <div className="free-shipping">
+                  Free shipping
+                </div>
                 <img
                   src={cart.photo}
                   alt="model"
@@ -29,11 +33,17 @@ class Carts extends Component {
                       {cart.currency}
                     </small>
                     <b>
-                      {cart.price.dollars + cart.price.cents}
+                      {cart.price.dollars}
                     </b>
+                    <span>
+                      {cart.price.cents}
+                      </span>
                   </div>
                   <div className="installment">
-                    {cart.installment}
+                    {cart.installment.num}
+                    <span style={{fontWeight: 'bold'}}>
+                      {cart.installment.price}
+                    </span>
                   </div>
                 </div>
                 <div
