@@ -19,7 +19,10 @@ export const Carts = [
       dollars: 10,
       cents: ".90"
     },
-    installment: "or 9x of $ 1.21",
+    installment: {
+      num: "or 9x of",
+      price: " $ 1.21"
+    },
     size: "L",
     id: 0
   },
@@ -31,7 +34,10 @@ export const Carts = [
       dollars: 29,
       cents: ".45"
     },
-    installment: "or 9x of $ 1.21",
+    installment: {
+      num: "or 9x of",
+      price: " $ 1.21"
+    },
     size: "M",
     id: 1
   },
@@ -43,7 +49,10 @@ export const Carts = [
       dollars: 9,
       cents: ".00"
     },
-    installment: `or 3x of $ 3.00`,
+    installment: {
+      num: "or 3x of",
+      price: " $ 3.00"
+    },
     size: "XL",
     id: 2
   },
@@ -55,7 +64,10 @@ export const Carts = [
       dollars: 14,
       cents: ".00"
     },
-    installment: "or 5x of $ 2.80",
+    installment: {
+      num: "or 5x of",
+      price: " $ 2.80"
+    },
     size: "XXL",
     id: 3
   },
@@ -67,7 +79,10 @@ export const Carts = [
       dollars: 13,
       cents: ".25"
     },
-    installment: "or 3x of $ 4.42",
+    installment: {
+      num: "or 3x of",
+      price: " $ 4.42"
+    },
     size: "L",
     id: 4
   },
@@ -79,7 +94,10 @@ export const Carts = [
       dollars: 75,
       cents: ".00"
     },
-    installment: "or 5x of $ 15.00",
+    installment: {
+      num: "or 5x of",
+      price: " $ 15.00"
+    },
     size: "L",
     id: 5
   },
@@ -91,7 +109,10 @@ export const Carts = [
       dollars: 25,
       cents: ".90"
     },
-    installment: "or 12x of $ 2.16",
+    installment: {
+      num: "or 12x of",
+      price: " $ 2.16"
+    },
     size: "L",
     id: 6
   },
@@ -103,7 +124,10 @@ export const Carts = [
       dollars: 10,
       cents: ".90"
     },
-    installment: "or 9x of $ 1.21",
+    installment: {
+      num: "or 9x of",
+      price: " $ 1.21"
+    },
     size: "L",
     id: 7
   }

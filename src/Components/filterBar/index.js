@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Sizes} from '../../data/index'
-import Sort from '../OrderBy/index'
 
 class Filter extends Component {
 
@@ -13,10 +12,10 @@ class Filter extends Component {
   render() {
     return (
       <div className="filter-bar">
+        <h1 className="title">
+          Sizes:
+        </h1>
         <div className="filter">
-          <h1 className="title">
-            Sizes:
-          </h1>
           {
             Sizes.map(item => (
                 <div
@@ -24,7 +23,10 @@ class Filter extends Component {
                   key={item.size}
                 >
                   <label>
-                    <input type="checkbox" value={item.size}/>
+                    <input
+                      type="checkbox"
+                      value={item.size}
+                    />
                     <span
                       id={item.size}
                       className="checkmark"
@@ -44,8 +46,6 @@ class Filter extends Component {
             {/*<span>button</span>*/}
           </div>
         </div>
-
-        <Sort/>
       </div>
     )
   }

@@ -3,18 +3,25 @@ import {connect} from "react-redux";
 import {
   removeCartAction,
   isOpenAction,
+  closePanelAction,
+  incProductAction,
+  decProductAction
 } from "../../Actions/index";
 
 const mapStateToProps = (state) => {
   return {
     PanelsVisibility: state.PanelsVisibility,
-    Basket: state.Basket
+    Basket: state.Basket,
+    Counter: state.Counter
   };
 };
 
 const mapDispatchToProps = {
-  isOpen: isOpenAction,
-  removeCart: removeCartAction
+  closePanel: closePanelAction,
+  togglePanel: isOpenAction,
+  removeCart: removeCartAction,
+  increment: incProductAction,
+  decrement: decProductAction
 };
 
 

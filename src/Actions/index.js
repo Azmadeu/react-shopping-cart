@@ -4,12 +4,21 @@ import {
   OPEN_PANEL,
   ADD_CART,
   REMOVE_CART,
-  FILTER
+  FILTER,
+  CLOSE_PANEL,
+  INCREMENT_PRODUCT,
+  DECREMENT_PRODUCT
 } from './types'
+
+export const closePanelAction = () => {
+  return {
+    type: CLOSE_PANEL
+  }
+};
 
 export const isOpenAction = () => {
   return {
-    type: TOGGLE_PANEL,
+    type: TOGGLE_PANEL
   }
 };
 
@@ -33,11 +42,24 @@ export const removeCartAction = (id) => {
     id: id,
     products: Carts
   }
+
 };
 
 export const filterAction = (size) => {
   return {
     type: FILTER,
     size: size
+  }
+};
+
+export const incProductAction = () => {
+  return {
+    type: INCREMENT_PRODUCT
+  }
+};
+
+export const decProductAction = () => {
+  return {
+    type: DECREMENT_PRODUCT
   }
 };
