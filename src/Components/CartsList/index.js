@@ -7,7 +7,7 @@ class Carts extends Component {
   };
 
   render() {
-    const carts = this.props.Carts;
+    const carts = this.props.Products[0];
     return (
       <div className="container">
         {

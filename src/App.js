@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Provider} from 'react-redux';
-import {store} from './Reducers/index';
-import {Carts} from './data/index';
-import CartsList from './Containers/CartsListContainer/index';
-import ControlledPanel from './Containers/TogglePanelContainer/index';
-import Filter from './Components/filterBar/index';
+import {store} from './Reducers';
+import {Carts} from './Reducers/FilterSize';
+import CartsList from './Containers/CartsListContainer';
+import ControlledPanel from './Containers/TogglePanelContainer';
+import FilterBar from './Containers/FilterBarContainer';
 import banner from './asserts/img/banner.jpg'
 import './App.css';
 
@@ -19,7 +19,7 @@ class App extends Component {
             alt="banner"
           />
           <div className="main">
-            <Filter/>
+            <FilterBar/>
             <CartsList Carts={Carts}/>
           </div>
           <ControlledPanel/>

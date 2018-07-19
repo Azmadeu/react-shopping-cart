@@ -7,7 +7,7 @@ import {
 
 const mapStateToProps = (state) => {
   return {
-    panelsVisibility: state.panelsVisibility,
+    PanelsVisibility: state.PanelsVisibility,
     Basket: state.Basket
   };
 };

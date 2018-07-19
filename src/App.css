@@ -338,11 +338,6 @@ small {
   transform: scale(1.2);
 }
 
-.checkmark:active {
-  background-color: black;
-  color: #fff;
-}
-
 .container .cart .btn:hover {
   background-color: #ffc22b;
   transition: background-color .5s;
@@ -519,6 +514,11 @@ small {
 
 .star-container {
   text-align: center;
+}
+
+.active-btn {
+  background-color: black;
+  color: #fff;
 }
 
 .plus img {

@@ -6,7 +6,10 @@ class Panel extends Component {
   };
 
   handleClick = (event) => {
-    this.props.removeCart(event.target.id)
+    this.props.removeCart(event.target.id);
+    this.setState(prevState => ({
+      onMouse: !prevState.onMouse
+    }))
   };
 
   onMouseOver = () => {
@@ -23,17 +26,17 @@ class Panel extends Component {
 
   render() {
     const {
-      panelsVisibility,
+      PanelsVisibility,
       Basket
     } = this.props;
     return (
-      <div className={panelsVisibility ? "control-cart open" : "control-cart closed"}>
+      <div className={PanelsVisibility ? "control-cart open" : "control-cart closed"}>
         <div
-          className={panelsVisibility ? "bag-open" : "bag-closed"}
+          className={PanelsVisibility ? "bag-open" : "bag-closed"}
           onClick={this.props.isOpen}
         >
           {
-            panelsVisibility ?
+            PanelsVisibility ?
               "X"
               :
               <span className="quantity">
@@ -65,6 +68,7 @@ class Panel extends Component {
                 Basket.map(item => (
                   <div
                     className={this.state.onMouse ? "shelf-item mouseover" : "shelf-item"}
+                    key={item.id}
                   >
                     <div className="thumb">
                       <img

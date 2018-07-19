@@ -1,8 +1,9 @@
-import panelsVisibility from './PanelsVisibility';
+import PanelsVisibility from './PanelsVisibility';
 import Basket from './Basket';
-import { createStore, combineReducers } from 'redux';
+import FilterReducer from './FilterSize'
+import {createStore, combineReducers} from 'redux';
 
-const Reducer = combineReducers({panelsVisibility, Basket});
+const Reducer = combineReducers({FilterReducer, PanelsVisibility, Basket});
 
 export const store = createStore(Reducer);
 
