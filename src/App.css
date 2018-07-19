@@ -591,3 +591,9 @@ small {
   flex-direction: column;
   text-align: center;
 }
+
+.quantity-holder {
+  display: flex;
+  justify-content: center;
+  background-color: #f6f9fd;
+}

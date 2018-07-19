@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Sizes} from '../../data/index'
+import {Sizes} from '../../data'
 
 class Filter extends Component {
 

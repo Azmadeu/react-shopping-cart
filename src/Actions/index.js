@@ -1,4 +1,4 @@
-import  { Carts }  from '../Reducers/FilterSize'
+import  { Carts }  from '../data'
 import {
   TOGGLE_PANEL,
   OPEN_PANEL,
@@ -48,7 +48,8 @@ export const removeCartAction = (id) => {
 export const filterAction = (size) => {
   return {
     type: FILTER,
-    size: size
+    size: size,
+    filterSizes: []
   }
 };
 
