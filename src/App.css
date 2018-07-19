@@ -107,13 +107,38 @@ small {
 
 .bag-closed {
   position: absolute;
-  left: -40px;
   width: 40px;
+  left: -45px;
+  top: 10px;
   height: 40px;
   cursor: pointer;
   background: url("./asserts/img/lock.png") no-repeat transparent;
   background-size: cover;
 }
+
+/*.quantity-holder .input {*/
+  /*display: block;*/
+  /*width: 100%;*/
+  /*padding: 10px 0;*/
+  /*border: none;*/
+  /*text-align: center;*/
+  /*text-rendering: auto;*/
+  /*letter-spacing: normal;*/
+  /*word-spacing: normal;*/
+  /*text-transform: none;*/
+  /*text-indent: 0px;*/
+  /*text-shadow: none;*/
+  /*-webkit-appearance: textfield;*/
+  /*background-color: white;*/
+  /*-webkit-rtl-ordering: logical;*/
+  /*cursor: text;*/
+  /*outline: none;*/
+  /*vertical-align: middle;*/
+  /*line-height: 18px;*/
+  /*color: #333;*/
+  /*color: initial;*/
+  /*font: 14px/16px 'Ubuntu',Arial,sans-serif;*/
+/*}*/
 
 .bag-open {
   width: 50px;
@@ -315,6 +340,8 @@ small {
 }
 
 .filter {
+  display:flex;
+  flex-wrap: wrap;
   margin-left: 40px;
   margin-top: 20px;
 }
@@ -390,6 +417,12 @@ small {
   width: 235px;
   height: 345px;
 }
+
+.cart:hover .btn {
+  background-color: #ffc22b;
+  transition: background-color .5s;
+}
+
 
 .sort select {
   background-color: #fff;

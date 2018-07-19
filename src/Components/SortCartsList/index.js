@@ -6,7 +6,7 @@ class Sort extends Component {
       <div className="header">
         <small className="products-found">
           <span>
-            "{this.props.Carts.length}" Product(s) found.
+            "{this.props.Products.length}" Product(s) found.
           </span>
         </small>
         <div className="sort">

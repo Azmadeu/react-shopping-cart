@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 
 class Panel extends Component {
   state = {
-    onMouse: false
+    onMouse: false,
+    total: 0
   };
 
   componentDidMount() {
@@ -21,9 +22,10 @@ class Panel extends Component {
 
   handleClick = (event) => {
     this.props.removeCart(event.target.id);
+    this.props.Counter >= 0 && this.props.decrement();
     this.setState(prevState => ({
       onMouse: !prevState.onMouse
-    }))
+    }));
   };
 
   onMouseOver = () => {
@@ -41,7 +43,8 @@ class Panel extends Component {
   render() {
     const {
       PanelsVisibility,
-      Basket
+      Basket,
+      Counter
     } = this.props;
     return (
       <div
@@ -57,7 +60,7 @@ class Panel extends Component {
               "X"
               :
               <span className="quantity">
-                {Basket.length}
+                {Counter}
               </span>
           }
         </div>
@@ -65,7 +68,7 @@ class Panel extends Component {
           <div className="header">
             <div className="bag">
               <span className="quantity">
-                {Basket.length}
+                {Counter}
               </span>
             </div>
             <span className="title">
@@ -107,12 +110,15 @@ class Panel extends Component {
                       <p className="desc">
                         L | Preto com listras brancas
                         <br/>
-                        Quantity: 1
-
+                        <span id="Quantity">
+                          Quantity: 1
+                        </span>
                       </p>
                     </div>
                     <div className="price">
-                      <p>{item.currency + " " + item.price.dollars + item.price.cents}</p>
+                      <p>
+                        {item.currency + " " + item.price.dollars + item.price.cents}
+                      </p>
                     </div>
                   </div>
                 ))
@@ -129,17 +135,13 @@ class Panel extends Component {
                     ?
                     "$ 0.00"
                     :
-                    Basket.length === 1
-                      ?
-                      ("$ " + Basket[0].price.dollars + Basket[0].price.cents)
-                      :
-                      (() => {
-                        let result = 0;
-                        Basket.forEach(item => {
-                          result += +(item.price.dollars + item.price.cents);
-                        });
-                        return "$ " + result.toFixed(2);
-                      })()
+                    (() => {
+                      let result = 0;
+                      Basket.forEach(item => {
+                        result += +(item.price.dollars + item.price.cents);
+                      });
+                      return "$ " + result.toFixed(2);
+                    })()
                 }
               </p>
             </div>

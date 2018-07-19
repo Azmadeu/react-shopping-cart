@@ -1,18 +1,21 @@
 import React, {Component} from 'react';
+
 class Carts extends Component {
 
   handleClick = (event) => {
     this.props.addCart(event.target.id);
     this.props.openPanel();
+    this.props.increment();
   };
+
   render() {
-    const carts = this.props.Products[0];
+    console.log(this.props.Products);
     return (
       <div
         className="container"
       >
         {
-          carts.map(cart => (
+          this.props.Products.map(cart => (
               <div
                 className="cart"
                 key={cart.model}
@@ -45,6 +48,11 @@ class Carts extends Component {
                       {cart.installment.price}
                     </span>
                   </div>
+                </div>
+                <div className="quantity-holder">
+                  <span className="minus x-quantity">-</span>
+                    <span className="input x-quantity">0</span>
+                  <span className="plus x-quantity">+</span>
                 </div>
                 <div
                   className="btn"

@@ -6,8 +6,8 @@ import {
   REMOVE_CART,
   FILTER,
   CLOSE_PANEL,
-  INCREMENT_PRODUCT,
-  DECREMENT_PRODUCT
+  INCREMENT_PRODUCT_IN_BASKET,
+  DECREMENT_PRODUCT_IN_BASKET
 } from './types'
 
 export const closePanelAction = () => {
@@ -54,12 +54,12 @@ export const filterAction = (size) => {
 
 export const incProductAction = () => {
   return {
-    type: INCREMENT_PRODUCT
+    type: INCREMENT_PRODUCT_IN_BASKET
   }
 };
 
 export const decProductAction = () => {
   return {
-    type: DECREMENT_PRODUCT
+    type: DECREMENT_PRODUCT_IN_BASKET
   }
 };

@@ -6,7 +6,16 @@ import {
   Skuul,
   Sphynx,
   BornOnStreet,
-  WineSkuul
+  WineSkuul,
+  Tso3DBlack,
+  Tso3D,
+  OnTheStreets,
+  CatTeeTwo,
+  CrazyMonkeyGrey,
+  CrazyMonkey,
+  ManTieDie,
+  WhiteDGK,
+  DangerKnife
 } from '../asserts/img'
 import { FILTER } from '../Actions/types'
 
@@ -130,14 +139,150 @@ export const Carts = [
     },
     size: "L",
     id: 7
-  }
+  },
+  {
+    photo: DangerKnife,
+    model: "Danger Knife Grey",
+    currency: "$",
+    price: {
+      dollars: 14,
+      cents: ".90"
+    },
+    installment: {
+      num: "or 7x of",
+      price: " $ 2.13"
+    },
+    size: "L",
+    id: 8
+  },
+  {
+    photo: WhiteDGK,
+    model: "White DGK Script Tee",
+    currency: "$",
+    price: {
+      dollars: 14,
+      cents: ".90"
+    },
+    installment: {
+      num: "or 7x of",
+      price: " $ 2.13"
+    },
+    size: "L",
+    id: 9
+  },
+  {
+    photo: CatTeeTwo,
+    model: "Cat Tee Black T-Shirt A",
+    currency: "$",
+    price: {
+      dollars: 10,
+      cents: ".90"
+    },
+    installment: {
+      num: "or 9x of",
+      price: " $ 1.21"
+    },
+    size: "L",
+    id: 10
+  },
+  {
+    photo: Tso3D,
+    model: "Tso 3D Short Sleeve T-Shirt A",
+    currency: "$",
+    price: {
+      dollars: 10,
+      cents: ".90"
+    },
+    installment: {
+      num: "or 9x of",
+      price: " $ 1.21"
+    },
+    size: "L",
+    id: 11
+  },
+  {
+    photo: ManTieDie,
+    model: "Man Tie Dye Cinza Grey T-Shirt",
+    currency: "$",
+    price: {
+      dollars: 49,
+      cents: ".90"
+    },
+    installment: {
+      num: "or 10x of",
+      price: "4.90"
+    },
+    size: "L",
+    id: 12
+  },
+  {
+    photo: CrazyMonkey,
+    model: "Crazy Monkey Black T-Shirt",
+    currency: "$",
+    price: {
+      dollars: 22,
+      cents: ".50"
+    },
+    installment: {
+      num: "or 4x of",
+      price: " $ 5.63"
+    },
+    size: "L",
+    id: 13
+  },
+  {
+    photo: Tso3DBlack,
+    model: "Tso 3D Black T-Shirt",
+    currency: "$",
+    price: {
+      dollars: 18,
+      cents: ".70"
+    },
+    installment: {
+      num: "or 4x of",
+      price: " $ 4.67"
+    },
+    size: "L",
+    id: 14
+  },
+  {
+    photo: CrazyMonkeyGrey,
+    model: "Crazy Monkey Grey",
+    currency: "$",
+    price: {
+      dollars: 134,
+      cents: ".90"
+    },
+    installment: {
+      num: "or 5x of",
+      price: " $ 26.98"
+    },
+    size: "L",
+    id: 16
+  },
+  {
+    photo: OnTheStreets,
+    model: "On The Streets Black T-Shirt",
+    currency: "$",
+    price: {
+      dollars: 49,
+      cents: ".00"
+    },
+    installment: {
+      num: "or 9x of",
+      price: " $ 5.44"
+    },
+    size: "L",
+    id: 17
+  },
+
 ];
 
-export default (state = [Carts], action) => {
+export default (state = Carts, action) => {
   switch(action.type) {
     case FILTER:
       return [...state].filter((item) => {
-        return item.size
+        return item.size === action.size
       });
     default:
       return state;

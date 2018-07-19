@@ -5,7 +5,8 @@ class Filter extends Component {
 
   handleClick = (event) => {
     if (event.target.className === 'checkmark') {
-      event.target.className = 'checkmark active-btn'
+      event.target.className = 'checkmark active-btn';
+      this.props.Filter(event.target.id);
     } else event.target.className = "checkmark"
   };
 
