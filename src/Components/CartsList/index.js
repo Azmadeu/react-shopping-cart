@@ -9,10 +9,9 @@ class Carts extends Component {
   };
 
   render() {
-    console.log(this.props.Products);
     return (
       <div
-        className="container"
+        className="content-container"
       >
         {
           this.props.Products.map(cart => (

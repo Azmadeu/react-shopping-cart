@@ -8,15 +8,23 @@ class Filter extends Component {
 
   handleClick = (event) => {
     if (event.target.className === 'checkmark') {
-        this.state.picked.push(event.target.id);
-        this.props.Filter(this.state.picked);
+      this.addSize(event.target.id);
       event.target.className = 'checkmark active-btn';
     } else {
+      this.removeSize(event.target.id);
       event.target.className = "checkmark";
-      this.state.picked.splice([...this.state.picked].indexOf(event.target.id), 1);
-      this.props.Filter(this.state.picked)
     }
   };
+
+  addSize(elem) {
+    this.state.picked.push(elem);
+    this.props.Filter(this.state.picked);
+  }
+
+  removeSize(elem) {
+    this.state.picked.splice([...this.state.picked].indexOf(elem), 1);
+    this.props.Filter(this.state.picked);
+  }
 
   render() {
     return (

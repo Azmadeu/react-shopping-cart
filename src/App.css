@@ -284,7 +284,7 @@ small {
   }
 }
 
-.container {
+.content-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -315,23 +315,23 @@ small {
   border: 1px solid #ededed;
 }
 
-.container .cart .title {
+.content-container .cart .title {
   padding: 14px 0px;
   display: flex;
   justify-content: center;
 }
 
-.container .cart .price .installment {
+.content-container .cart .price .installment {
   color: #9c9b9b;
   padding: 5px 0;
 }
 
-.container .cart .price b {
+.content-container .cart .price b {
   font-size: 1.5em;
   margin-left: 5px;
 }
 
-.container .cart .btn {
+.content-container .cart .btn {
   background-color: #1b1a20;
   color: #fff;
   padding: 15px 0;
@@ -365,12 +365,12 @@ small {
   transform: scale(1.2);
 }
 
-.container .cart .btn:hover {
+.content-container .cart .btn:hover {
   background-color: #ffc22b;
   transition: background-color .5s;
 }
 
-.container .header {
+.content-container .header {
   margin-bottom: 10px;
 }
 
@@ -451,12 +451,11 @@ small {
 }
 
 .carts-list .shelf-item {
+  display: flex;
   position: relative;
   box-sizing: border-box;
   padding: 5%;
   transition: background-color .2s, opacity .2s;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .mouseover:hover {

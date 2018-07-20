@@ -8,8 +8,6 @@ import {
   CLOSE_PANEL,
   INCREMENT_PRODUCT_IN_BASKET,
   DECREMENT_PRODUCT_IN_BASKET,
-  ADD_SIZE_TO_FILTER,
-  REMOVE_SIZE_FROM_FILTER
 } from './types'
 
 export const closePanelAction = () => {
@@ -60,8 +58,9 @@ export const incProductAction = () => {
   }
 };
 
-export const decProductAction = () => {
+export const decProductAction = (quantity) => {
   return {
-    type: DECREMENT_PRODUCT_IN_BASKET
+    type: DECREMENT_PRODUCT_IN_BASKET,
+    quantity: quantity
   }
 };

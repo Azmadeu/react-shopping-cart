@@ -9,6 +9,12 @@ export default (state = defaultState, action) => {
   switch (action.type) {
     case ADD_CART:
       const addedElem = action.products.find(item => +item.id === +action.id);
+      if (state.includes(addedElem)) {
+        let index = state.indexOf(addedElem);
+        ++state[index].quantity;
+        state[index].price.total += +(state[index].price.dollars + state[index].price.cents);
+        return [...state];
+      }
       return [...state, addedElem];
     case REMOVE_CART:
       const removedElem = action.products.find(item => +item.id === +action.id);

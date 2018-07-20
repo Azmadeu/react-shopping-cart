@@ -8,7 +8,7 @@ export default (state = 0, action) => {
     case INCREMENT_PRODUCT_IN_BASKET:
       return state + 1;
     case DECREMENT_PRODUCT_IN_BASKET:
-      return state - 1;
+      return state - action.quantity;
     default:
       return state;
   }

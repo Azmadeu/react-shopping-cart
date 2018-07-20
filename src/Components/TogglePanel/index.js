@@ -1,18 +1,31 @@
 import React, {Component} from 'react';
+import ModalWindow from "../../Containers/ModalWindowContainer";
 
 class Panel extends Component {
-  state = {
-    onMouse: false,
-    total: 0
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      onMouse: false,
+      total: 0,
+      show: false
+    };
+  }
 
   componentDidMount() {
     document.getElementById('container').addEventListener('mousedown', this.handleClickOutside);
   }
 
   componentWillUnmount() {
-        document.getElementById('container').removeEventListener('mousedown', this.handleClickOutside);
+    document.getElementById('container').removeEventListener('mousedown', this.handleClickOutside);
   }
+
+  handleClose = () => {
+    this.setState({show: false});
+  };
+
+  handleShow = () => {
+    this.setState({show: true});
+  };
 
   handleClickOutside = (event) => {
     if (event.target.className !== "btn") {
@@ -21,11 +34,13 @@ class Panel extends Component {
   };
 
   handleClick = (event) => {
+    this.handleShow();
+    const removedElem = this.props.Basket.find(item =>
+      +item.id === +event.target.id
+    );
+    this.props.Counter >= 0 && this.props.decrement(removedElem.quantity);
     this.props.removeCart(event.target.id);
-    this.props.Counter >= 0 && this.props.decrement();
-    this.setState(prevState => ({
-      onMouse: !prevState.onMouse
-    }));
+    this.setState(prevState => ({onMouse: !prevState.onMouse}));
   };
 
   onMouseOver = () => {
@@ -43,7 +58,7 @@ class Panel extends Component {
   totalPrice() {
     let result = 0;
     this.props.Basket.forEach(item => {
-      result += +(item.price.dollars + item.price.cents);
+      result += item.price.total;
     });
     return "$ " + result.toFixed(2);
   }
@@ -111,6 +126,10 @@ class Panel extends Component {
                       onMouseOut={this.onMouseOut}
                       onClick={this.handleClick}
                     />
+                    <ModalWindow
+                      show={this.state.show}
+                      handleClose={this.handleClose}
+                    />
                     <div className="details">
                       <p className="title">
                         {item.model}
@@ -119,13 +138,13 @@ class Panel extends Component {
                         L | Preto com listras brancas
                         <br/>
                         <span id="Quantity">
-                          Quantity: 1
+                          Quantity: {item.quantity}
                         </span>
                       </p>
                     </div>
                     <div className="price">
                       <p>
-                        {item.currency + " " + item.price.dollars + item.price.cents}
+                        {"$ " + (item.price.total).toFixed(2)}
                       </p>
                     </div>
                   </div>
@@ -141,7 +160,7 @@ class Panel extends Component {
                 {this.totalPrice()}
               </p>
             </div>
-            <div className="check">
+            <div className="check" onClick={() => alert(this.totalPrice())}>
               Checkout
             </div>
           </div>

@@ -25,14 +25,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 10,
-      cents: ".90"
+      cents: ".90",
+      total: 10.90
     },
     installment: {
       num: "or 9x of",
       price: " $ 1.21"
     },
     size: "L",
-    id: 0
+    id: 0,
+    quantity: 1
   },
   {
     photo: DarkThug,
@@ -40,14 +42,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 29,
-      cents: ".45"
+      cents: ".45",
+      total: 29.45
     },
     installment: {
       num: "or 9x of",
       price: " $ 1.21"
     },
     size: "M",
-    id: 1
+    id: 1,
+    quantity: 1
   },
   {
     photo: Sphynx,
@@ -55,14 +59,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 9,
-      cents: ".00"
+      cents: ".00",
+      total: 9.00
     },
     installment: {
       num: "or 3x of",
       price: " $ 3.00"
     },
     size: "XL",
-    id: 2
+    id: 2,
+    quantity: 1
   },
   {
     photo: Skuul,
@@ -70,14 +76,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 14,
-      cents: ".00"
+      cents: ".00",
+      total: 14.00
     },
     installment: {
       num: "or 5x of",
       price: " $ 2.80"
     },
     size: "XXL",
-    id: 3
+    id: 3,
+    quantity: 1
   },
   {
     photo: WineSkuul,
@@ -85,14 +93,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 13,
-      cents: ".25"
+      cents: ".25",
+      total: 13.25
     },
     installment: {
       num: "or 3x of",
       price: " $ 4.42"
     },
     size: "L",
-    id: 4
+    id: 4,
+    quantity: 1
   },
   {
     photo: ShortSleeve,
@@ -100,14 +110,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 75,
-      cents: ".00"
+      cents: ".00",
+      total: 75.00
     },
     installment: {
       num: "or 5x of",
       price: " $ 15.00"
     },
     size: "S",
-    id: 5
+    id: 5,
+    quantity: 1
   },
   {
     photo: BornOnStreet,
@@ -115,14 +127,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 25,
-      cents: ".90"
+      cents: ".90",
+      total: 25.90
     },
     installment: {
       num: "or 12x of",
       price: " $ 2.16"
     },
     size: "ML",
-    id: 6
+    id: 6,
+    quantity: 1
   },
   {
     photo: SphynxTie,
@@ -130,14 +144,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 10,
-      cents: ".90"
+      cents: ".90",
+      total: 10.90
     },
     installment: {
       num: "or 9x of",
       price: " $ 1.21"
     },
     size: "XL",
-    id: 7
+    id: 7,
+    quantity: 1
   },
   {
     photo: DangerKnife,
@@ -145,14 +161,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 14,
-      cents: ".90"
+      cents: ".90",
+      total: 14.90
     },
     installment: {
       num: "or 7x of",
       price: " $ 2.13"
     },
     size: "M",
-    id: 8
+    id: 8,
+    quantity: 1
   },
   {
     photo: WhiteDGK,
@@ -160,14 +178,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 14,
-      cents: ".90"
+      cents: ".90",
+      total: 14.90
     },
     installment: {
       num: "or 7x of",
       price: " $ 2.13"
     },
     size: "M",
-    id: 9
+    id: 9,
+    quantity: 1
   },
   {
     photo: CatTeeTwo,
@@ -175,14 +195,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 10,
-      cents: ".90"
+      cents: ".90",
+      total: 10.90
     },
     installment: {
       num: "or 9x of",
       price: " $ 1.21"
     },
     size: "L",
-    id: 10
+    id: 10,
+    quantity: 1
   },
   {
     photo: Tso3D,
@@ -190,14 +212,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 10,
-      cents: ".90"
+      cents: ".90",
+      total: 10.90
     },
     installment: {
       num: "or 9x of",
       price: " $ 1.21"
     },
     size: "L",
-    id: 11
+    id: 11,
+    quantity: 1
   },
   {
     photo: ManTieDie,
@@ -205,14 +229,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 49,
-      cents: ".90"
+      cents: ".90",
+      total: 49.90
     },
     installment: {
       num: "or 10x of",
       price: "4.90"
     },
     size: "L",
-    id: 12
+    id: 12,
+    quantity: 1
   },
   {
     photo: CrazyMonkey,
@@ -220,14 +246,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 22,
-      cents: ".50"
+      cents: ".50",
+      total: 22.50
     },
     installment: {
       num: "or 4x of",
       price: " $ 5.63"
     },
     size: "L",
-    id: 13
+    id: 13,
+    quantity: 1
   },
   {
     photo: Tso3DBlack,
@@ -235,14 +263,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 18,
-      cents: ".70"
+      cents: ".70",
+      total: 18.70
     },
     installment: {
       num: "or 4x of",
       price: " $ 4.67"
     },
     size: "L",
-    id: 14
+    id: 14,
+    quantity: 1
   },
   {
     photo: CrazyMonkeyGrey,
@@ -250,14 +280,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 134,
-      cents: ".90"
+      cents: ".90",
+      total: 134.90
     },
     installment: {
       num: "or 5x of",
       price: " $ 26.98"
     },
     size: "XS",
-    id: 16
+    id: 15,
+    quantity: 1
   },
   {
     photo: OnTheStreets,
@@ -265,14 +297,16 @@ export const Carts = [
     currency: "$",
     price: {
       dollars: 49,
-      cents: ".00"
+      cents: ".00",
+      total: 49.00
     },
     installment: {
       num: "or 9x of",
       price: " $ 5.44"
     },
     size: "S",
-    id: 17
+    id: 16,
+    quantity: 1
   },
 
 ];

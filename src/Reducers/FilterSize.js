@@ -6,7 +6,7 @@ export default (state = Carts, action) => {
     case FILTER:
       state = Carts;
       const filteredBar = state.filter((item) => {
-        return action.size.indexOf(item.size) >= 0
+        return action.size.includes(item.size);
       });
       return filteredBar.length === 0 ? state : filteredBar;
     default:
