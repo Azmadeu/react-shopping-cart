@@ -7,12 +7,12 @@ import {
 
 const mapStateToProps = (state) => {
   return {
-    Products: state.FilterReducer
+    Products: state.FilterReducer,
   };
 };
 
 const mapDispatchToProps = {
-  Filter: filterAction
+  Filter: filterAction,
 };
 
 const FilterBar = connect(mapStateToProps, mapDispatchToProps)(Filter);

@@ -11,7 +11,7 @@ class Panel extends Component {
   }
 
   componentWillUnmount() {
-    document.getElementById('container').removeEventListener('mousedown', this.handleClickOutside);
+        document.getElementById('container').removeEventListener('mousedown', this.handleClickOutside);
   }
 
   handleClickOutside = (event) => {
@@ -39,6 +39,14 @@ class Panel extends Component {
       onMouse: !prevState.onMouse
     }))
   };
+
+  totalPrice() {
+    let result = 0;
+    this.props.Basket.forEach(item => {
+      result += +(item.price.dollars + item.price.cents);
+    });
+    return "$ " + result.toFixed(2);
+  }
 
   render() {
     const {
@@ -130,19 +138,7 @@ class Panel extends Component {
             </div>
             <div className="price">
               <p className="total">
-                {
-                  Basket.length === 0
-                    ?
-                    "$ 0.00"
-                    :
-                    (() => {
-                      let result = 0;
-                      Basket.forEach(item => {
-                        result += +(item.price.dollars + item.price.cents);
-                      });
-                      return "$ " + result.toFixed(2);
-                    })()
-                }
+                {this.totalPrice()}
               </p>
             </div>
             <div className="check">

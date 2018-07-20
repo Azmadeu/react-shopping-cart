@@ -7,7 +7,9 @@ import {
   FILTER,
   CLOSE_PANEL,
   INCREMENT_PRODUCT_IN_BASKET,
-  DECREMENT_PRODUCT_IN_BASKET
+  DECREMENT_PRODUCT_IN_BASKET,
+  ADD_SIZE_TO_FILTER,
+  REMOVE_SIZE_FROM_FILTER
 } from './types'
 
 export const closePanelAction = () => {
@@ -49,7 +51,6 @@ export const filterAction = (size) => {
   return {
     type: FILTER,
     size: size,
-    filterSizes: []
   }
 };
 

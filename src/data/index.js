@@ -106,7 +106,7 @@ export const Carts = [
       num: "or 5x of",
       price: " $ 15.00"
     },
-    size: "L",
+    size: "S",
     id: 5
   },
   {
@@ -121,7 +121,7 @@ export const Carts = [
       num: "or 12x of",
       price: " $ 2.16"
     },
-    size: "L",
+    size: "ML",
     id: 6
   },
   {
@@ -136,7 +136,7 @@ export const Carts = [
       num: "or 9x of",
       price: " $ 1.21"
     },
-    size: "L",
+    size: "XL",
     id: 7
   },
   {
@@ -151,7 +151,7 @@ export const Carts = [
       num: "or 7x of",
       price: " $ 2.13"
     },
-    size: "L",
+    size: "M",
     id: 8
   },
   {
@@ -166,7 +166,7 @@ export const Carts = [
       num: "or 7x of",
       price: " $ 2.13"
     },
-    size: "L",
+    size: "M",
     id: 9
   },
   {
@@ -256,7 +256,7 @@ export const Carts = [
       num: "or 5x of",
       price: " $ 26.98"
     },
-    size: "L",
+    size: "XS",
     id: 16
   },
   {
@@ -271,7 +271,7 @@ export const Carts = [
       num: "or 9x of",
       price: " $ 5.44"
     },
-    size: "L",
+    size: "S",
     id: 17
   },
 

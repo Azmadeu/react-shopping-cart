@@ -2,12 +2,20 @@ import React, {Component} from 'react';
 import {Sizes} from '../../data'
 
 class Filter extends Component {
+  state = {
+    picked: []
+  };
 
   handleClick = (event) => {
     if (event.target.className === 'checkmark') {
+        this.state.picked.push(event.target.id);
+        this.props.Filter(this.state.picked);
       event.target.className = 'checkmark active-btn';
-      this.props.Filter(event.target.id);
-    } else event.target.className = "checkmark"
+    } else {
+      event.target.className = "checkmark";
+      this.state.picked.splice([...this.state.picked].indexOf(event.target.id), 1);
+      this.props.Filter(this.state.picked)
+    }
   };
 
   render() {
