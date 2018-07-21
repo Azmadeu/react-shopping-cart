@@ -29,7 +29,7 @@ export const Carts = [
       total: 10.90
     },
     installment: {
-      num: "or 9x of",
+      times: "or 9x of",
       price: " $ 1.21"
     },
     size: "L",
@@ -46,7 +46,7 @@ export const Carts = [
       total: 29.45
     },
     installment: {
-      num: "or 9x of",
+      times: "or 9x of",
       price: " $ 1.21"
     },
     size: "M",
@@ -63,7 +63,7 @@ export const Carts = [
       total: 9.00
     },
     installment: {
-      num: "or 3x of",
+      times: "or 3x of",
       price: " $ 3.00"
     },
     size: "XL",
@@ -80,7 +80,7 @@ export const Carts = [
       total: 14.00
     },
     installment: {
-      num: "or 5x of",
+      times: "or 5x of",
       price: " $ 2.80"
     },
     size: "XXL",
@@ -97,7 +97,7 @@ export const Carts = [
       total: 13.25
     },
     installment: {
-      num: "or 3x of",
+      times: "or 3x of",
       price: " $ 4.42"
     },
     size: "L",
@@ -114,7 +114,7 @@ export const Carts = [
       total: 75.00
     },
     installment: {
-      num: "or 5x of",
+      times: "or 5x of",
       price: " $ 15.00"
     },
     size: "S",
@@ -131,7 +131,7 @@ export const Carts = [
       total: 25.90
     },
     installment: {
-      num: "or 12x of",
+      times: "or 12x of",
       price: " $ 2.16"
     },
     size: "ML",
@@ -148,7 +148,7 @@ export const Carts = [
       total: 10.90
     },
     installment: {
-      num: "or 9x of",
+      times: "or 9x of",
       price: " $ 1.21"
     },
     size: "XL",
@@ -165,7 +165,7 @@ export const Carts = [
       total: 14.90
     },
     installment: {
-      num: "or 7x of",
+      times: "or 7x of",
       price: " $ 2.13"
     },
     size: "M",
@@ -182,7 +182,7 @@ export const Carts = [
       total: 14.90
     },
     installment: {
-      num: "or 7x of",
+      times: "or 7x of",
       price: " $ 2.13"
     },
     size: "M",
@@ -199,7 +199,7 @@ export const Carts = [
       total: 10.90
     },
     installment: {
-      num: "or 9x of",
+      times: "or 9x of",
       price: " $ 1.21"
     },
     size: "L",
@@ -216,7 +216,7 @@ export const Carts = [
       total: 10.90
     },
     installment: {
-      num: "or 9x of",
+      times: "or 9x of",
       price: " $ 1.21"
     },
     size: "L",
@@ -233,7 +233,7 @@ export const Carts = [
       total: 49.90
     },
     installment: {
-      num: "or 10x of",
+      times: "or 10x of",
       price: "4.90"
     },
     size: "L",
@@ -250,7 +250,7 @@ export const Carts = [
       total: 22.50
     },
     installment: {
-      num: "or 4x of",
+      times: "or 4x of",
       price: " $ 5.63"
     },
     size: "L",
@@ -267,7 +267,7 @@ export const Carts = [
       total: 18.70
     },
     installment: {
-      num: "or 4x of",
+      times: "or 4x of",
       price: " $ 4.67"
     },
     size: "L",
@@ -284,7 +284,7 @@ export const Carts = [
       total: 134.90
     },
     installment: {
-      num: "or 5x of",
+      times: "or 5x of",
       price: " $ 26.98"
     },
     size: "XS",
@@ -301,7 +301,7 @@ export const Carts = [
       total: 49.00
     },
     installment: {
-      num: "or 9x of",
+      times: "or 9x of",
       price: " $ 5.44"
     },
     size: "S",

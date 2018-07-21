@@ -7,6 +7,8 @@ class Filter extends Component {
   };
 
   handleClick = (event) => {
+
+
     if (event.target.className === 'checkmark') {
       this.addSize(event.target.id);
       event.target.className = 'checkmark active-btn';
@@ -17,6 +19,7 @@ class Filter extends Component {
   };
 
   sortElems(SortType) {
+    this.props.Filter(this.state.picked);
     switch (SortType) {
       case 'toLowest':
         this.props.sortToLowest();
@@ -35,13 +38,11 @@ class Filter extends Component {
 
   addSize(elem) {
     this.state.picked.push(elem);
-    this.props.Filter(this.state.picked);
     this.sortElems(this.props.SortType);
   }
 
   removeSize(elem) {
     this.state.picked.splice([...this.state.picked].indexOf(elem), 1);
-    this.props.Filter(this.state.picked);
     this.sortElems(this.props.SortType);
   }
 

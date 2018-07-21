@@ -612,3 +612,25 @@ small {
 .quantity-holder .input {
   padding: 0 20px;
 }
+
+.cancel-x {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+}
+
+.delete-button {
+  background-color: #ff0000c2;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.cancel-button {
+  background-color: #fff;
+}

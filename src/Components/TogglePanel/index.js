@@ -6,8 +6,8 @@ class Panel extends Component {
     super(props);
     this.state = {
       onMouse: false,
-      total: 0,
-      show: false
+      show: false,
+      cartId: ''
     };
   }
 
@@ -20,21 +20,11 @@ class Panel extends Component {
   }
 
   handleClick = (event) => {
-    const removedElem = this.props.Basket.find(item =>
-      +item.id === +event.target.id
-    );
-    this.props.Counter >= 0 && this.props.decrement(removedElem.quantity);
-    this.props.removeCart(event.target.id);
-    this.setState(prevState => ({onMouse: !prevState.onMouse, show: true}));
-  };
-
-  handleClose = () => {
-    this.setState({show: false});
-  };
-
-  handleShow = () => {
-    console.log('SHOW');
-    this.setState({show: true});
+    this.setState({
+      onMouse: false,
+      show: true,
+      cartId: +event.target.id
+    });
   };
 
   handleClickOutside = (event) => {
@@ -43,17 +33,15 @@ class Panel extends Component {
     }
   };
 
-
-  onMouseOver = () => {
-    this.setState(prevState => ({
-      onMouse: !prevState.onMouse
-    }))
+  handleClose = () => {
+    this.setState({show: false});
   };
 
+  onMouseOver = () => {
+    this.setState({onMouse: true})};
+
   onMouseOut = () => {
-    this.setState(prevState => ({
-      onMouse: !prevState.onMouse
-    }))
+    this.setState({onMouse: false})
   };
 
   totalPrice() {
@@ -75,6 +63,11 @@ class Panel extends Component {
         className={PanelsVisibility ? "control-cart open" : "control-cart closed"}
         id="ignore"
       >
+        <ModalWindow
+          show={this.state.show}
+          cartId={this.state.cartId}
+          handleClose={this.handleClose}
+        />
         <div
           className={PanelsVisibility ? "bag-open" : "bag-closed"}
           onClick={this.props.togglePanel}
@@ -102,54 +95,48 @@ class Panel extends Component {
           <div className="carts-list">
             {
               Basket.length === 0
-                ?
-                <p className="shelf-empty">
-                  Add some product in the bag
-                  <br/>
-                  :)
-                </p>
-                :
-                Basket.map(item => (
-                  <div
-                    className={this.state.onMouse ? "shelf-item mouseover" : "shelf-item"}
-                    key={item.id}
-                  >
-                    <div className="thumb">
-                      <img
-                        src={item.photo}
-                        alt={item.model}
-                      />
-                    </div>
+                ? <p className="shelf-empty">
+                    Add some product in the bag
+                    <br/>
+                    :)
+                  </p>
+                : Basket.map(item => (
                     <div
-                      className="del"
-                      id={item.id}
-                      onMouseOver={this.onMouseOver}
-                      onMouseOut={this.onMouseOut}
-                      onClick={this.handleClick}
-                    />
-                    <ModalWindow
-                      show={this.state.show}
-                      handleClose={this.handleClose}
-                    />
-                    <div className="details">
-                      <p className="title">
-                        {item.model}
-                      </p>
-                      <p className="desc">
-                        L | Preto com listras brancas
-                        <br/>
-                        <span id="Quantity">
-                          Quantity: {item.quantity}
-                        </span>
-                      </p>
+                      className={this.state.onMouse ? "shelf-item mouseover" : "shelf-item"}
+                      key={item.id}
+                    >
+                      <div className="thumb">
+                        <img
+                          src={item.photo}
+                          alt={item.model}
+                        />
+                      </div>
+                      <div
+                        className="del"
+                        id={item.id}
+                        onMouseOver={this.onMouseOver}
+                        onMouseOut={this.onMouseOut}
+                        onClick={this.handleClick}
+                      />
+                      <div className="details">
+                        <p className="title">
+                          {item.model}
+                        </p>
+                        <p className="desc">
+                          L | Preto com listras brancas
+                          <br/>
+                          <span id="Quantity">
+                            Quantity: {item.quantity}
+                          </span>
+                        </p>
+                      </div>
+                      <div className="price">
+                        <p>
+                          {"$ " + (item.price.total).toFixed(2)}
+                        </p>
+                      </div>
                     </div>
-                    <div className="price">
-                      <p>
-                        {"$ " + (item.price.total).toFixed(2)}
-                      </p>
-                    </div>
-                  </div>
-                ))
+                  ))
             }
           </div>
           <div className="footer">

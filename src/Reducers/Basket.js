@@ -18,7 +18,8 @@ export default (state = defaultState, action) => {
       return [...state, addedElem];
     case REMOVE_CART:
       const removedElem = action.products.find(item => +item.id === +action.id);
-      const index = [...state].indexOf(removedElem);
+      const index = state.indexOf(removedElem);
+      state[index].quantity = 1;
       return state.slice(0, index).concat(state.slice(index + 1, state.length));
     default:
       return state;
