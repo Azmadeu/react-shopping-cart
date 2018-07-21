@@ -16,14 +16,33 @@ class Filter extends Component {
     }
   };
 
+  sortElems(SortType) {
+    switch (SortType) {
+      case 'toLowest':
+        this.props.sortToLowest();
+        break;
+      case 'toHighest':
+        this.props.sortToHighest();
+        break;
+      case 'select':
+        this.props.defaultSort();
+        break;
+      default:
+        this.props.defaultSort();
+        break;
+    }
+  }
+
   addSize(elem) {
     this.state.picked.push(elem);
     this.props.Filter(this.state.picked);
+    this.sortElems(this.props.SortType);
   }
 
   removeSize(elem) {
     this.state.picked.splice([...this.state.picked].indexOf(elem), 1);
     this.props.Filter(this.state.picked);
+    this.sortElems(this.props.SortType);
   }
 
   render() {

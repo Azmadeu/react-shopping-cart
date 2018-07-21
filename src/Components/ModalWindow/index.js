@@ -2,12 +2,7 @@ import React, {Component} from 'react';
 import {Button, Modal} from 'react-bootstrap'
 
 class Window extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    console.log(this.props);
     return (
       <div>
         <Modal show={this.props.show} onHide={this.props.handleClose}>

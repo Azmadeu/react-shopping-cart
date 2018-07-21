@@ -2,9 +2,10 @@ import PanelsVisibility from './PanelsVisibility';
 import Basket from './Basket';
 import FilterReducer from './FilterSize';
 import Counter from './CountProducts';
+import SortType from './SortingPrice';
 import {createStore, combineReducers} from 'redux';
 
-const Reducer = combineReducers({Counter, FilterReducer, PanelsVisibility, Basket});
+const Reducer = combineReducers({SortType, Counter, FilterReducer, PanelsVisibility, Basket});
 
 export const store = createStore(Reducer);
 

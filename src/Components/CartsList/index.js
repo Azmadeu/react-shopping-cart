@@ -9,6 +9,7 @@ class Carts extends Component {
   };
 
   render() {
+    console.log(this.props.Products);
     return (
       <div
         className="content-container"
