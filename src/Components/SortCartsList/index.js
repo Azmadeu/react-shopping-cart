@@ -1,23 +1,30 @@
 import React, {Component} from 'react'
 
 class Sort extends Component {
+
   handleChange = (event) => {
-    switch(event.target.value) {
+    const {
+      sortToHighest,
+      changeSortType,
+      sortToLowest,
+      defaultSort
+    } = this.props;
+    switch (event.target.value) {
       case 'lowestprice':
-        this.props.changeSortType('toHighest');
-        this.props.sortToHighest();
+        changeSortType('toHighest');
+        sortToHighest();
         break;
       case 'highestprice':
-        this.props.changeSortType('toLowest');
-        this.props.sortToLowest();
+        changeSortType('toLowest');
+        sortToLowest();
         break;
       case 'select':
-        this.props.changeSortType('select');
-        this.props.defaultSort();
+        changeSortType('select');
+        defaultSort();
         break;
       default:
-        this.props.changeSortType('select');
-        this.props.defaultSort();
+        changeSortType('select');
+        defaultSort();
         break;
     }
   };
