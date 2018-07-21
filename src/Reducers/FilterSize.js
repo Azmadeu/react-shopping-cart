@@ -15,10 +15,10 @@ const sortToHighest = (itemA, itemB) => {
 };
 
 const defaultSort = (itemA, itemB) => {
-  return Math.random() > 0.5 ? itemA.price.total - itemB.price.total : itemB.price.total - itemA.price.total
+  const a = itemA.price.total;
+  const b = itemB.price.total;
+  return Math.random() > 0.5 ? a - b : b - a;
 };
-
-
 
 export default (state = Carts, action) => {
   switch (action.type) {
