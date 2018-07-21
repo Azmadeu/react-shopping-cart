@@ -8,16 +8,15 @@ import {
 const mapStateToProps = (state) => {
   return {
     Basket: state.Basket,
-    Counter: state.Counter
   };
 };
 
-const mapDispatchToProps = {
-  removeCart: removeCartAction,
-  decrement: decProductAction
-};
+// const mapDispatchToProps = {
+//   removeCart: removeCartAction,
+//   decrement: decProductAction
+// };
 
 
-const ModalWindow = connect(mapStateToProps, mapDispatchToProps)(Window);
+const ModalWindow = connect(mapStateToProps, null)(Window);
 
 export default ModalWindow

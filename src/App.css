@@ -597,5 +597,18 @@ small {
 .quantity-holder {
   display: flex;
   justify-content: center;
-  background-color: #f6f9fd;
+  color: #14141a;
+  font-size: 20px;
+}
+
+.quantity-holder .minus {
+  font-weight: bold;
+}
+
+.quantity-holder .plus {
+  font-weight: bold;
+}
+
+.quantity-holder .input {
+  padding: 0 20px;
 }

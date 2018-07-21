@@ -19,11 +19,21 @@ class Panel extends Component {
     document.getElementById('container').removeEventListener('mousedown', this.handleClickOutside);
   }
 
+  handleClick = (event) => {
+    const removedElem = this.props.Basket.find(item =>
+      +item.id === +event.target.id
+    );
+    this.props.Counter >= 0 && this.props.decrement(removedElem.quantity);
+    this.props.removeCart(event.target.id);
+    this.setState(prevState => ({onMouse: !prevState.onMouse, show: true}));
+  };
+
   handleClose = () => {
     this.setState({show: false});
   };
 
   handleShow = () => {
+    console.log('SHOW');
     this.setState({show: true});
   };
 
@@ -33,15 +43,6 @@ class Panel extends Component {
     }
   };
 
-  handleClick = (event) => {
-    this.handleShow();
-    const removedElem = this.props.Basket.find(item =>
-      +item.id === +event.target.id
-    );
-    this.props.Counter >= 0 && this.props.decrement(removedElem.quantity);
-    this.props.removeCart(event.target.id);
-    this.setState(prevState => ({onMouse: !prevState.onMouse}));
-  };
 
   onMouseOver = () => {
     this.setState(prevState => ({

@@ -9,7 +9,6 @@ class Carts extends Component {
   };
 
   render() {
-    console.log(this.props.Products);
     return (
       <div
         className="content-container"
@@ -49,11 +48,11 @@ class Carts extends Component {
                     </span>
                   </div>
                 </div>
-                {/*<div className="quantity-holder">*/}
-                  {/*<span className="minus x-quantity">-</span>*/}
-                    {/*<span className="input x-quantity">0</span>*/}
-                  {/*<span className="plus x-quantity">+</span>*/}
-                {/*</div>*/}
+                <div className="quantity-holder">
+                  <span className="minus x-quantity">-</span>
+                  <span className="input x-quantity">0</span>
+                  <span className="plus x-quantity">+</span>
+                </div>
                 <div
                   className="btn"
                   id={cart.id}
