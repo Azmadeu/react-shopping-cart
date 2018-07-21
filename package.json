@@ -2,6 +2,7 @@
   "name": "shopping-cart",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://Azmadeu.github.io/react-shopping-cart",
   "dependencies": {
     "3": "^2.1.0",
     "bootstrap": "^4.1.2",
@@ -14,12 +15,15 @@
     "redux": "^4.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "redux-devtools": "^3.4.1"
+    "redux-devtools": "^3.4.1",
+    "gh-pages": "^1.2.0"
   }
 }
