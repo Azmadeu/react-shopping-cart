@@ -21,7 +21,6 @@ class Panel extends Component {
 
   handleClick = (event) => {
     this.setState({
-      onMouse: false,
       show: true,
       cartId: +event.target.id
     });
@@ -37,11 +36,8 @@ class Panel extends Component {
     this.setState({show: false});
   };
 
-  onMouseOver = () => {
-    this.setState({onMouse: true})};
-
-  onMouseOut = () => {
-    this.setState({onMouse: false})
+  onMouse = () => {
+    this.setState({onMouse: !this.state.onMouse})
   };
 
   totalPrice() {
@@ -56,21 +52,35 @@ class Panel extends Component {
     const {
       PanelsVisibility,
       Basket,
-      Counter
+      Counter,
+      togglePanel
     } = this.props;
+    const {
+      show,
+      cartId,
+      onMouse
+    } = this.state;
     return (
       <div
-        className={PanelsVisibility ? "control-cart open" : "control-cart closed"}
+        className={
+          PanelsVisibility
+            ? "control-cart open"
+            : "control-cart closed"
+        }
         id="ignore"
       >
         <ModalWindow
-          show={this.state.show}
-          cartId={this.state.cartId}
+          show={show}
+          cartId={cartId}
           handleClose={this.handleClose}
         />
         <div
-          className={PanelsVisibility ? "bag-open" : "bag-closed"}
-          onClick={this.props.togglePanel}
+          className={
+            PanelsVisibility
+              ? "bag-open"
+              : "bag-closed"
+          }
+          onClick={togglePanel}
         >
           {
             PanelsVisibility ?
@@ -96,47 +106,52 @@ class Panel extends Component {
             {
               Basket.length === 0
                 ? <p className="shelf-empty">
-                    Add some product in the bag
-                    <br/>
-                    :)
-                  </p>
+                  Add some product in the bag
+                  <br/>
+                  :)
+                </p>
                 : Basket.map(item => (
-                    <div
-                      className={this.state.onMouse ? "shelf-item mouseover" : "shelf-item"}
-                      key={item.id}
-                    >
-                      <div className="thumb">
-                        <img
-                          src={item.photo}
-                          alt={item.model}
-                        />
-                      </div>
-                      <div
-                        className="del"
-                        id={item.id}
-                        onMouseOver={this.onMouseOver}
-                        onMouseOut={this.onMouseOut}
-                        onClick={this.handleClick}
+                  <div
+                    className={
+                      onMouse
+                        ? "shelf-item mouseover"
+                        : "shelf-item"
+                    }
+                    key={item.id}
+                  >
+                    <div className="thumb">
+                      <img
+                        src={item.photo}
+                        alt={item.model}
                       />
-                      <div className="details">
-                        <p className="title">
-                          {item.model}
-                        </p>
-                        <p className="desc">
-                          L | Preto com listras brancas
-                          <br/>
-                          <span id="Quantity">
-                            Quantity: {item.quantity}
-                          </span>
-                        </p>
-                      </div>
-                      <div className="price">
-                        <p>
-                          {"$ " + (item.price.total).toFixed(2)}
-                        </p>
-                      </div>
                     </div>
-                  ))
+                    <div
+                      className="del"
+                      id={item.id}
+                      onMouseOver={this.onMouse}
+                      onMouseOut={this.onMouse}
+                      onClick={this.handleClick}
+                    />
+                    <div className="details">
+                      <p className="title">
+                        {item.model}
+                      </p>
+                      <p className="desc">
+                        L | Preto com listras brancas
+                        <br/>
+                        <span id="Quantity">
+                            Quantity: {item.quantity}
+                        </span>
+                      </p>
+                    </div>
+                    <div className="price">
+                      <p>
+                        {"$ " + (item.price.total).toFixed(2)}
+                      </p>
+                    </div>
+                  </div>
+                )
+                )
             }
           </div>
           <div className="footer">
@@ -148,7 +163,10 @@ class Panel extends Component {
                 {this.totalPrice()}
               </p>
             </div>
-            <div className="check" onClick={() => alert(this.totalPrice())}>
+            <div
+              className="check"
+              onClick={() => alert(this.totalPrice())}
+            >
               Checkout
             </div>
           </div>

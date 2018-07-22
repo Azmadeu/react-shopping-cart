@@ -19,12 +19,16 @@ class Carts extends Component {
                 className="cart"
                 key={cart.model}
               >
-                <div className="free-shipping">Free shipping</div>
+                <div className="free-shipping">
+                  Free shipping
+                </div>
                 <img
                   src={cart.photo}
                   alt="model"
                 />
-                <div className="title">{cart.model}</div>
+                <div className="title">
+                  {cart.model}
+                </div>
                 <div className="price">
                   <div>
                     <small>{cart.currency}</small>

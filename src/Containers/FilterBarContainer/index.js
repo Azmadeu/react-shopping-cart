@@ -10,7 +10,6 @@ import {
 
 const mapStateToProps = (state) => {
   return {
-    Products: state.FilterReducer,
     SortType: state.SortType
   };
 };

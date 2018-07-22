@@ -39,8 +39,11 @@ class Sort extends Component {
         </small>
         <div className="sort">
           <span>Order by</span>
-          <select id="select-sort" onChange={this.handleChange}>
-            <option value="Select"> Select</option>
+          <select
+            id="select-sort"
+            onChange={this.handleChange}
+          >
+            <option value="Select">Select</option>
             <option value="lowestprice">Lowest to highest</option>
             <option value="highestprice">Highest to lowest</option>
           </select>

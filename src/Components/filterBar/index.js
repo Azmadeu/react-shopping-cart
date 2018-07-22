@@ -6,9 +6,7 @@ class Filter extends Component {
     picked: []
   };
 
-  handleClick = (event) => {
-
-
+  filterChange = (event) => {
     if (event.target.className === 'checkmark') {
       this.addSize(event.target.id);
       event.target.className = 'checkmark active-btn';
@@ -19,19 +17,26 @@ class Filter extends Component {
   };
 
   sortElems(SortType) {
-    this.props.Filter(this.state.picked);
+    const {
+      Filter,
+      sortToLowest,
+      sortToHighest,
+      defaultSort
+    } = this.props;
+
+    Filter(this.state.picked);
     switch (SortType) {
       case 'toLowest':
-        this.props.sortToLowest();
+        sortToLowest();
         break;
       case 'toHighest':
-        this.props.sortToHighest();
+        sortToHighest();
         break;
       case 'select':
-        this.props.defaultSort();
+        defaultSort();
         break;
       default:
-        this.props.defaultSort();
+        defaultSort();
         break;
     }
   }
@@ -42,7 +47,8 @@ class Filter extends Component {
   }
 
   removeSize(elem) {
-    this.state.picked.splice([...this.state.picked].indexOf(elem), 1);
+    const { picked } = this.state;
+    picked.splice([...picked].indexOf(elem), 1);
     this.sortElems(this.props.SortType);
   }
 
@@ -67,7 +73,7 @@ class Filter extends Component {
                     <span
                       id={item.size}
                       className="checkmark"
-                      onClick={this.handleClick}
+                      onClick={this.filterChange}
                     >
                     {item.size}
                   </span>
@@ -80,7 +86,6 @@ class Filter extends Component {
             <small>
               Leave a star on Github if this repository was useful :)
             </small>
-            {/*<span>button</span>*/}
           </div>
         </div>
       </div>

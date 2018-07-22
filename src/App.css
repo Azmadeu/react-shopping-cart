@@ -634,3 +634,10 @@ small {
 .cancel-button {
   background-color: #fff;
 }
+
+.modal-warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
