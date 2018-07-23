@@ -155,6 +155,7 @@ class Panel extends Component {
             }
           </div>
           <div className="footer">
+            <div className="sub-price">
             <div className="sub">
               SUBTOTAL
             </div>
@@ -162,6 +163,7 @@ class Panel extends Component {
               <p className="total">
                 {this.totalPrice()}
               </p>
+            </div>
             </div>
             <div
               className="check"
