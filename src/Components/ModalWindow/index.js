@@ -32,7 +32,7 @@ class Window extends Component {
           <Modal.Header>
             <span
               className="cancel-x"
-              onClick={this.closeModal}
+              onClick={handleClose}
             >
               x
             </span>

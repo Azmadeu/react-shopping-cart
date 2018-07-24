@@ -636,9 +636,35 @@ small {
   text-align: center;
 }
 
-@media only screen  and (max-width: 600px) {
+@media only screen  and (max-width: 560px) {
+
+  .shelf-item .price {
+    margin-top: 13px;
+    font-size: 10px;
+  }
+
+  .shelf-item .desc {
+    font-size: 7px;
+  }
+
+  .shelf-item .del {
+    top: 7px;
+  }
+
+  .modal-warning {
+    font-size: 11px;
+  }
+
+  .btn {
+    padding: 8px;
+  }
+
   .content .footer .check {
-    padding: 6px;
+    padding: 4px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     font-size: 12px;
     margin-top: 0;
     width: 162px;
@@ -653,6 +679,22 @@ small {
     height: 30px;
     left: -30px;
     line-height: 30px;
+  }
+
+  .content .title {
+    font-size: 9px;
+  }
+
+  .bag {
+    width: 25px;
+    height: 25px;
+  }
+
+  .quantity {
+    width: 11px;
+    height: 11px;
+    line-height: 11px;
+    font-size: 9px;
   }
 
   .content .carts-list {
@@ -750,6 +792,13 @@ small {
 
   .closed {
     right: -195px;
+  }
+
+  .bag-close {
+    width: 33px;
+    left: -37px;
+    top: 10px;
+    height: 33px;
   }
 
 }
